@@ -51,7 +51,7 @@
 }
 
 .btn:hover:before {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 0 15px linear-gradient(
     90deg, var(--primary) 0%, var(--secondary) 100%
   );
