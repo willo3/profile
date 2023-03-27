@@ -17,6 +17,8 @@
   text-decoration: none;
   font-weight: 600;
   pointer-events: none;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
 }
 
 .navbar a {
@@ -25,7 +27,9 @@
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-
+  animation: slideTop .5s ease forwards;
+  opacity: 0;
+  animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a.active,

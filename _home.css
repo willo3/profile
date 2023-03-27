@@ -5,10 +5,13 @@
   display:flex;
   align-items: center;
   padding: 0 10%;
+  justify-content: space-between;
+  padding: 70px 10% 0;
 }
 
 .home-content {
   max-width: 50%;
+
 }
 
 .home-content h1 {

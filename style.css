@@ -4,6 +4,8 @@
 @import "./_hex-grid.css";
 @import "./_home.css";
 @import "./_buttons.css";
+@import "./_hexagon-profile-pic.css";
+@import "./_animations.css";
 
 * {
   margin: 0;
