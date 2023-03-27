@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@import "./_navbar.css";
-@import "./_colors.css";
-@import "./_hex-grid.css";
-@import "./_home.css";
-@import "./_buttons.css";
-@import "./_hexagon-profile-pic.css";
-@import "./_animations.css";
+@import "_navbar.css";
+@import "_colors.css";
+@import "_hex-grid.css";
+@import "_home.css";
+@import "_buttons.css";
+@import "_hexagon-profile-pic.css";
+@import "_animations.css";
 
 * {
   margin: 0;
