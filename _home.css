@@ -7,11 +7,18 @@
   padding: 0 10%;
   justify-content: space-between;
   padding: 70px 10% 0;
+
 }
 
 .home-content {
-  max-width: 50%;
+  max-width: 45%;
+  min-width: 200px;
 
+}
+
+.home-content .typewriter {
+  color: var(--secondary);
+  text-shadow: 0 0 4px var(--secondary);
 }
 
 .home-content h1 {
@@ -26,11 +33,20 @@
 }
 
 .home-content p {
-  font-size: 150%;
+  font-size: 200%;
   font-weight: 400;
   margin: 20px 0 40px;
+  text-align: justify;
 }
 
 .home-content a {
   margin-top: 2%;
+}
+
+.social-buttons {
+  margin: 5%;
+}
+
+.missing-button-spacer {
+  margin-top: 108px;
 }

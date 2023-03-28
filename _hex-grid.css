@@ -24,7 +24,7 @@
   height: 15em;
   filter: blur(15px);
   background: linear-gradient(
-    90deg, var(--primary) 0%, var(--secondary) 100%
+    45deg, var(--primary) 0%, var(--secondary) 100%
   );
   z-index: -1;
 }

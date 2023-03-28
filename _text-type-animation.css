@@ -1,0 +1,99 @@
+/* Typewriter effect 1 */
+@keyframes typing {
+  0.0000%, 31.462% { content: ""; }
+  0.769%, 30.692% { content: "F"; }
+  1.538%, 29.923% { content: "Fu"; }
+  2.308%, 29.154% { content: "Ful"; }
+  3.077%, 28.385% { content: "Full"; }
+  3.846%, 27.615% { content: "Fulls"; }
+  4.615%, 26.846% { content: "Fullst"; }
+  5.385%, 27.615% { content: "Fullsta"; }
+  6.154%, 26.846% { content: "Fullstac"; }
+  6.923%, 26.077% { content: "Fullstack"; }
+  7.692%, 25.308% { content: "Fullstack "; }
+  8.462%, 24.538% { content: "Fullstack D"; }
+  9.231%, 23.769% { content: "Fullstack De"; }
+  10.000%, 23.000% { content: "Fullstack Dev"; }
+  10.769%, 22.231% { content: "Fullstack Deve"; }
+  11.538%, 21.462% { content: "Fullstack Devel"; }
+  12.308%, 20.692% { content: "Fullstack Develo"; }
+  12.308%, 19.923% { content: "Fullstack Develop"; }
+  13.846%, 19.154% { content: "Fullstack Develope"; }
+  13.846%, 18.385% { content: "Fullstack Developer"; }
+
+  33.0%, 58.120% { content: ""; }
+  33.632%, 57.488% { content: "L"; }
+  34.264%, 56.856% { content: "Le"; }
+  34.896%, 56.224% { content: "Le "; }
+  35.528%, 55.592% { content: "Le W"; }
+  36.160%, 54.960% { content: "Le Wa"; }
+  36.792%, 54.328% { content: "Le Wag"; }
+  37.424%, 53.696% { content: "Le Wago"; }
+  38.056%, 53.064% { content: "Le Wagon"; }
+  38.688%, 52.432% { content: "Le Wagon "; }
+  39.320%, 51.800% { content: "Le Wagon G"; }
+  39.952%, 51.168% { content: "Le Wagon Gr"; }
+  40.584%, 50.536% { content: "Le Wagon Gra"; }
+  41.216%, 49.904% { content: "Le Wagon Grad"; }
+  41.848%, 49.272% { content: "Le Wagon Gradu"; }
+  42.480%, 48.640% { content: "Le Wagon Gradua"; }
+  43.112%, 48.008% { content: "Le Wagon Graduat"; }
+  43.744%, 47.376% { content: "Le Wagon Graduate"; }
+
+  61.120%, 97.738% { content: ""; }
+  62.029%, 96.829% { content: "H"; }
+  62.937%, 95.921% { content: "He"; }
+  63.846%, 95.012% { content: "Hex"; }
+  64.754%, 94.104% { content: "Hexa"; }
+  65.663%, 93.195% { content: "Hexag"; }
+  66.572%, 92.286% { content: "Hexago"; }
+  67.480%, 91.378% { content: "Hexagon"; }
+  68.389%, 90.469% { content: "Hexagon "; }
+  69.297%, 89.561% { content: "Hexagon E"; }
+  70.206%, 88.652% { content: "Hexagon En"; }
+  71.115%, 87.743% { content: "Hexagon Ent"; }
+  72.023%, 86.835% { content: "Hexagon Enth"; }
+  72.932%, 85.926% { content: "Hexagon Enthu"; }
+  73.840%, 85.018% { content: "Hexagon Enthus"; }
+  74.749%, 84.109% { content: "Hexagon Enthusi"; }
+  75.657%, 83.200% { content: "Hexagon Enthusia"; }
+  76.566%, 82.292% { content: "Hexagon Enthusias"; }
+  77.475%, 81.383% { content: "Hexagon Enthusiast"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+
+}
