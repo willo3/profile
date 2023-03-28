@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "jquery": "^3.6.4"
+    "jquery": "^3.6.4",
+    "serve": "^14.2.0"
+  },
+  "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}"
   }
 }
