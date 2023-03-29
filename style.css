@@ -3,6 +3,7 @@
 @import "_colors.css";
 @import "_hex-grid.css";
 @import "_home.css";
+@import "_about.css";
 @import "_buttons.css";
 @import "_hexagon-profile-pic.css";
 @import "_animations.css";
@@ -13,10 +14,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden
 }
 
 *::-webkit-scrollbar {
@@ -41,4 +47,9 @@ body {
   align-items: center;
   min-height: 100vh;
   position: relative;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
 }

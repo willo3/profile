@@ -11,36 +11,42 @@
   </head>
 
   <body>
-
     <div class="container">
+
       <header class="header">
         <a href="#" class="logo">Will Parker</a>
+
+        <i class="fa fa-bars" id="menu-icon"></i>
+
         <nav class="navbar" id="navbar">
-          <a href="#" class="active">Home</a>
-          <a href="#" style="--i:2;">About</a>
-          <a href="#"style="--i:3;">Skills</a>
-          <a href="#"style="--i:4;">Portfolio</a>
-          <a href="#"style="--i:5;">Contact</a>
+          <a href="#index" class="active">Home</a>
+          <a href="#about" style="--i:2;">About</a>
+          <a href="#skills"style="--i:3;">Skills</a>
+          <a href="#portfolio"style="--i:4;">Portfolio</a>
+          <a href="#contact"style="--i:5;">Contact</a>
         </nav>
+
+
       </header>
       <header class="header"  id="hex-grid">
         <div class="light"></div>
         <div class="grid"></div>
       </header>
-      <section class="home">
+
+          <!-- Home Section -->
+      <section class="home" id="home">
+
         <div class="social-buttons">
-          <a href="https://www.linkedin.com/in/william-robert-parker/"><span class="hb hb-md spin-icon"><i class="fa fa-linkedin"></i></span></a>
-          <a href="https://github.com/willo3"><span class="hb hb-md spin-icon"><i class="fa fa-github-alt"></i></span></a>
+          <a href="https://www.linkedin.com/in/william-robert-parker/" target="_blank"><span class="hb hb-md spin-icon"><i class="fa fa-linkedin"></i></span></a>
+          <a href="https://github.com/willo3" target="_blank"><span class="hb hb-md spin-icon"><i class="fa fa-github-alt"></i></span></a>
           <div class="missing-button-spacer"></div>
         </div>
+
         <div class="home-content">
           <h1>Hi, I'm Will</h1>
-          <h3 aria-label="Hi! I'm a developer">
-            I'm a &nbsp;<span class="typewriter"></span>
-          </h3>
-          <p>Welcome to my portfolio site! There's not much here yet as I've only just finished my course, but please take a look around to see if you think I have potential! Thank you for your time! 😊</p>
-          <!-- <a href="https://www.quandary.lol" class="btn" >See My Work</a> -->
-          <a href="https://www.quandary.lol" class="hex-button hex-border">My Latest Project</a>
+          <h3>I'm a &nbsp;<span class="typewriter"></span>          </h3>
+          <p>Welcome to my portfolio site! There's not much here yet as I've only just finished my course, but please take a look around to see if you think I have potential! Thank you for your time!</p>
+          <a href="https://www.quandary.lol" target="_blank" class="hex-button hex-border">My Latest Project</a>
         </div>
 
         <div class="profile-picture">
@@ -48,7 +54,30 @@
             <img src="./Profile-picture.png" alt="">
           </div>
         </div>
+
       </section>
+
     </div>
+            <!-- About Section -->
+      <section class="about" id="about">
+        <div class="about-picture">
+          <div class="picture">
+            <img src="./Profile-picture.png" alt="">
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h2 class="heading">About <span>Me</span></h2>
+          <h3>Fullstack Developer</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus facilis exercitationem minus aperiam, harum veritatis, ipsa aspernatur dolore dolorem atque esse laudantium consequuntur quod iure ullam deserunt ipsam. Accusantium, quam?</p>
+        </div>
+      </section>
+            <!-- Skills Section -->
+
+            <!-- Portfolio Section -->
+
+            <!-- Contact Section -->
+
+
     <script src="./app.js"></script>
   </body>
