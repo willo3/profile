@@ -3,6 +3,7 @@
 	position:relative;
 	text-align: center; /*  Default text align center */
 	z-index: 0;
+
 }
 
 .hb:before,
@@ -45,9 +46,6 @@
 .hb:after {
 	 box-sizing: border-box;
 
-	 /* default transition time is set .25s = 250 millisecond
-	 Uncomment following if you want to set transition on hexagon color change */
-
 	 -webkit-transition: all .25s ease;
 	   -moz-transition: all .25s ease;
 	    -ms-transition: all .25s ease;
@@ -58,8 +56,7 @@
 .hb-md {
 	line-height: 37px;
 	font-size: 37px;
-	margin: 37px 0px; /* Original output, margin 0 of the button */
-	/*margin: 52px 15px;*/ /* New output, margin 15px of the button,  37 + 15 = 52 */
+	margin: 37px 0px;
 }
 .hb-md ,
 .hb-md:before ,
@@ -74,6 +71,7 @@
 	background: #373a3c;
 	border-color: #373a3c;
 	color: #ffffff;
+
 }
 .hb-linkedin:hover,
 .hb-linkedin:hover:before,
@@ -138,7 +136,72 @@
 }
 
 
-.btn {
+
+
+
+.hex-button{
+  position: relative;
+	display:block;
+	background: transparent;
+	width:200px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:15px;
+	text-decoration:none;
+	text-transform:uppercase;
+
+}
+.hex-button:before, .hex-button:after {
+	width:200px;
+  left: 0px;
+	height:27px;
+  z-index: -1;
+}
+
+.hex-border{ color: var(--secondary); }
+
+
+/* Hex-button Border Style */
+.hex-border:before,.hex-border:after {
+	border: 3px solid var(--secondary);
+}
+
+
+.hex-button:before{
+  position: absolute;
+  content: '';
+  border-bottom: none;
+  -webkit-transform: perspective(15px) rotateX(5deg);
+  -moz-transform: perspective(15px) rotateX(5deg);
+  transform: perspective(15px) rotateX(5deg);
+}
+.hex-button:after{
+  position: absolute;
+  top: 32px;
+  content: '';
+  border-top: none;
+  -webkit-transform: perspective(15px) rotateX(-5deg);
+  -moz-transform: perspective(15px) rotateX(-5deg);
+  transform: perspective(15px) rotateX(-5deg);
+}
+
+/* Hex-button Hover Style */
+.hex-border:hover:before, .hex-border:hover:after {
+	background: linear-gradient(
+    90deg, var(--primary) 0%, var(--secondary) 100%
+  );
+}
+
+.hex-button:hover{
+	color:#fff;
+}
+
+
+
+
+
+/* .btn {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -190,4 +253,4 @@
   text-shadow: 0 0 15px linear-gradient(
     -20deg, var(--primary) 0%, var(--secondary) 100%
   );
-  }
+  } */

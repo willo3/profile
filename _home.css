@@ -18,7 +18,7 @@
 
 .home-content .typewriter {
   color: var(--secondary);
-  text-shadow: 0 0 4px var(--secondary);
+  text-shadow: 0 0 9px var(--secondary);
 }
 
 .home-content h1 {
