@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 10vh;
 }
 
 .logo {
@@ -16,7 +17,6 @@
   color: var(--text);
   font-weight: 600;
   pointer-events: none;
-  cursor: default;
   opacity: 0;
   animation: slideTop 1s ease forwards;
 }
