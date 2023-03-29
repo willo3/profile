@@ -14,7 +14,8 @@
 .about-content {
   max-width: 45%;
   min-width: 200px;
-
+  color: var(--text);
+  z-index: 100;
 }
 
 .about-content h1 {
