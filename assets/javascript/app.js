@@ -31,3 +31,16 @@ jQuery(function(){ //Hover color as icon
 	jQuery( ".hb.inv .fa-github,.hb.inv .fa-github-square, .hb.inv .fa-github-alt").parent().addClass("hb-github-inv").removeClass("hb-github");
 
 });
+
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onClick = function () {
+  dropDownMenu.classList.toggle('open')
+  const isOpen = dropDownMenu.classList.contains('open')
+
+  toggleBtnIcon.classList = isOpen
+  ? 'fa fa-xmark'
+  : 'fa fa-bars'
+}
