@@ -7,8 +7,9 @@
 @import "./_hexagon-profile-pic.css";
 @import "./_home.css";
 @import "./_navbar.css";
+@import "./_responsiveness.css";
 @import "./_text-type-animation.css";
-@import "./_typing.css";
+/* @import "./_typing.css"; */
 
 * {
   margin: 0;

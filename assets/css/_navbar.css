@@ -17,7 +17,7 @@ li {
 .header a {
   text-decoration: none;
   color: var(--text);
-  font-size: 2.5rem;
+  font-size: 2.75rem!important;
 }
 
 .navbar {
@@ -32,7 +32,7 @@ li {
 }
 
 .navbar .logo {
-  font-size: 3rem;
+  font-size: 5rem!important;
   color: var(--text);
   font-weight: 600;
   pointer-events: none;
@@ -44,7 +44,6 @@ li {
 .navbar .links {
   display: flex;
   gap: 3rem;
-
 }
 
 #menu-icon {
@@ -71,7 +70,7 @@ li {
 }
 
 .dropdown_menu.open {
-  height: 26rem;
+  height: 28rem;
 }
 
 .dropdown_menu li {
@@ -79,21 +78,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Responsiveness */
-@media (max-width: 992px) {
-  .navbar .links {
-    display: none;
-  }
-
-  .navbar #menu-icon {
-    display: block;
-  }
-
-  .dropdown_menu {
-    display: block;
-  }
 }
 
 
