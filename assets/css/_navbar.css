@@ -39,6 +39,8 @@ li {
   opacity: 0;
   animation: slideTop 1s ease forwards;
   margin-left: 2rem;
+  position: relative;
+  
 }
 
 .navbar .links {
@@ -55,6 +57,7 @@ li {
 
 /* Dropdown Mobile Menu */
 .dropdown_menu {
+  z-index: 100;
   display: none;
   position: absolute;
   right: 2rem;
@@ -62,8 +65,8 @@ li {
   width: 30rem;
   height: 0;
   margin-right: 6rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(0.25rem);
+  background: rgb(77, 77, 77);
+  /* backdrop-filter: blur(0.25rem); */
   border-radius: 0.2rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -78,6 +81,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
 }
 
 
