@@ -49,15 +49,15 @@ toggleBtn.addEventListener('click', function () {
 // Electric Current Effect
 chars = ["⬤"];
 allStreams = [];
-textCol1 = "#030a1a";
-textCol2 = "#030a1a";
+textCol1 = "#030a1e";
+textCol2 = "#030a1e";
 style = 0;
 var i = 0;
 
 /* ----- Settings ----- */
 // Time Delay between String Spawn
-minStringDelay = 100;
-maxStringDelay = 300;
+minStringDelay = 200;
+maxStringDelay = 350;
 
 // Nr. of Chars for Strings
 minStringLength = 4;
@@ -73,7 +73,6 @@ function matrixString(){
   ranTime = Math.floor(Math.random() * maxStringDelay + minStringDelay);
   ranLen = Math.floor(Math.random() * maxStringLength + minStringLength);
   leftPos = Math.floor(Math.random() * $("#text-output").width() + 0);
-  // leftPosRounded = Math.round(Math.floor(Math.random() * $("#text-output").width() + 0) / 30) * 30;
 
   singleStream = [];
   for(j=0; j<ranLen;j++){

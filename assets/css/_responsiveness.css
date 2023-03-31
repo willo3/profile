@@ -1,4 +1,5 @@
 /* Responsiveness */
+/* Navbar */
 @media (min-width: 610px) and (max-width: 992px) {
   .navbar .links {
     display: none;

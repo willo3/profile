@@ -12,8 +12,8 @@
 }
 
 .about-content {
-  max-width: 45%;
-  min-width: 200px;
+  max-width: 60%;
+  min-width: 50rem!important;
   color: var(--text);
   z-index: 100;
 }

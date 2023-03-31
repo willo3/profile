@@ -10,11 +10,13 @@
   animation-delay: 1s, 2s;
 }
 
-
-
-.picture img {
+.profile-picture img {
   width: 40vh;
   margin-left: 5vh;
   margin-right: 5vh;
+}
 
+.about-picture img {
+  width: 40vh;
+  margin-right: 15vh;
 }
