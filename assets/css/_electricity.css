@@ -1,0 +1,61 @@
+
+#cp-bg{
+  background-image: url("https://res.cloudinary.com/dq0do13da/image/upload/v1533667085/Cyberpunk.png");
+  /* Image from: https://steamcommunity.com/sharedfiles/filedetails/?id=1406075299 */
+  height: 100%;
+  width: 100%;
+  background-position: 0% 50%;
+}
+@media only screen and(max-width: 768px){
+  #cp-bg{
+    background-position: 0% 50%;
+    z-index: -2;
+  }
+}
+
+.matrixString{
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: absolute;
+  font-family: 'Rajdhani', monospace;
+  font-size: 32px;
+  white-space: nowrap;
+  mix-blend-mode: screen;
+  /* letter-spacing: -10px; */
+  /* animation: text-pulse ease-in-out 1s; */
+  z-index: -2;
+}
+
+/* ----- Controls Menu ----- */
+
+.matrixBtn{
+  margin: 5px;
+  display: block;
+  float: right;
+  border: 2px solid #fff;
+  background: #292929;
+  padding: 10px 20px;
+  color: #fff;
+  transition: 200ms ease-in-out;
+}
+.matrixBtn:hover{
+  background: #414141;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  box-shadow: inset 0px 0px 10px #000;
+}
+
+/* ----- Animations ----- */
+@keyframes text-pulse{
+  0%{text-shadow: 0px 0px 20px #42f45f;}
+  50%{text-shadow: 0px 0px 0px #42f45f;}
+  100%{text-shadow: 0px 0px 20px #42f45f;}
+}
+
+@keyframes border-glow{
+  0%{box-shadow: inset 0px 0px 20px #2355dd;}
+  25%{box-shadow: inset 0px 0px 0px rgba(0,0,0,0);}
+  50%{box-shadow: inset 0px 0px 20px #e83363;}
+  75%{box-shadow: inset 0px 0px 0px rgba(0,0,0,0);}
+  100%{box-shadow: inset 0px 0px 20px #2355dd;}
+}

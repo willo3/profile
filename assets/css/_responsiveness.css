@@ -18,11 +18,6 @@
   .home-content {
   }
 
-  .picture img {
-    width: 80%;
-    margin-left: 15vh;
-    margin-right: 5vh;
-  }
 }
 
 @media (min-width: 610px) and (max-width: 991px) {
@@ -312,4 +307,15 @@
     display: none;
   }
 
+}
+
+
+/* Pictures */
+
+@media (min-width: 991px) and (max-width: 1085px) {
+  .picture img {
+  width: 30vh;
+  margin-left: 7vh;
+  margin-right: 7vh;
+  }
 }
