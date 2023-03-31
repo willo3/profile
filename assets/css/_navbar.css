@@ -40,7 +40,7 @@ li {
   animation: slideTop 1s ease forwards;
   margin-left: 2rem;
   position: relative;
-  
+
 }
 
 .navbar .links {
@@ -84,7 +84,13 @@ li {
   z-index: 100;
 }
 
-
+.navbar li a.active,
+.navbar li a:hover {
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: none;
+}
 
 
 
