@@ -242,7 +242,7 @@
 }
 
 
-@media (min-width: 350px) and (max-width: 410px) {
+@media (max-width: 410px) {
   .navbar .links {
     display: none;
     z-index: 101;
