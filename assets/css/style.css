@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import "./_about.css";
+@import "./_about-animation.css";
 @import "./_animations.css";
 @import "./_buttons.css";
 @import "./_colors.css";
 @import "./_electricity.css";
 @import "./_hex-grid.css";
-@import "./_hexagon-profile-pic.css";
 @import "./_home.css";
+@import "./_home-animation.css";
 @import "./_navbar.css";
+@import "./_navbar-animation.css";
 @import "./_responsiveness.css";
+@import "./_skills.css";
 @import "./_text-type-animation.css";
-/* @import "./_typing.css"; */
 
 * {
   box-sizing: border-box;

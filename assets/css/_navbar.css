@@ -35,11 +35,8 @@ li {
   color: var(--text);
   font-weight: 600;
   pointer-events: none;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
   margin-left: 4rem;
   position: relative;
-
 }
 
 .navbar .links {

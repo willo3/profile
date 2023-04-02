@@ -1,0 +1,5 @@
+.profile-picture {
+  opacity: 0;
+  animation: zoomIn 1.5s ease forwards, floatingImage 4s ease-in-out infinite;
+  animation-delay: 1s, 2s;
+}

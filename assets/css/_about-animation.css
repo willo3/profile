@@ -1,0 +1,19 @@
+/* .about-picture {
+  opacity: 0;
+  animation: scrollSlideLeft 2s;
+  animation-delay: 1s, 2s;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+} */
+
+.about-picture .picture {
+  animation: floatingImage 4s ease-in-out infinite;
+}
+
+/* .about-content {
+  opacity: 0;
+  animation: scrollSlideRight 1s;
+  animation-delay: 1s, 2s;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+} */

@@ -16,8 +16,8 @@
     z-index: 101;
   }
 
-  .home-content {
-  }
+  /* .home-content {
+  } */
 
 }
 
@@ -85,7 +85,7 @@
     font-size: 5rem;
     font-weight: 700;
     line-height: 1.2;
-     /* overflow-wrap: break-word!important;
+    /* overflow-wrap: break-word!important;
     word-wrap: break-word!important;
     white-space: nowrap!important; */
   }
@@ -143,7 +143,7 @@
     font-size: 5rem;
     font-weight: 700;
     line-height: 1.2;
-     /* overflow-wrap: break-word!important;
+    /* overflow-wrap: break-word!important;
     word-wrap: break-word!important;
     white-space: nowrap!important; */
   }
@@ -213,7 +213,7 @@
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.2;
-     /* overflow-wrap: break-word!important;
+    /* overflow-wrap: break-word!important;
     word-wrap: break-word!important;
     white-space: nowrap!important; */
   }
@@ -282,7 +282,7 @@
     font-size: 2.75rem;
     font-weight: 700;
     line-height: 1.2;
-     /* overflow-wrap: break-word!important;
+    /* overflow-wrap: break-word!important;
     word-wrap: break-word!important;
     white-space: nowrap!important; */
   }

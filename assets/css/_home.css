@@ -8,7 +8,6 @@
   padding: 0 10%;
   justify-content: space-between;
   padding: 70px 10% 0;
-
 }
 
 .home-content {
@@ -60,6 +59,12 @@
 
 .home-content a {
   margin-top: 2%;
+}
+
+.profile-picture img {
+  width: 40vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
 }
 
 .social-buttons {

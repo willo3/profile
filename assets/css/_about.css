@@ -1,5 +1,4 @@
 .about {
-
   width: 100%;
   height: 100%;
   display:flex;
@@ -12,7 +11,7 @@
 }
 
 .about-content {
-  max-width: 60%;
+  max-width: 50%;
   min-width: 50rem!important;
   color: var(--text);
   z-index: 100;
@@ -38,4 +37,15 @@
 
 .about-content a {
   margin-top: 2%;
+}
+
+.about-picture {
+  max-width: 50%;
+  min-width: 50rem!important;
+}
+
+.about-picture img {
+  width: 40rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }

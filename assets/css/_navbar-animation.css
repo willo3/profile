@@ -1,0 +1,9 @@
+.navbar .logo {
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.navbar .links {
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
