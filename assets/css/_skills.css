@@ -94,14 +94,15 @@ h1 {
   text-align: center;
   bottom: 60%;
   padding-top:50%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   z-index: 1;
 }
+
 .hex h1:before, .hex h1:after {
   display: inline-block;
-  margin: 0 0.5em;
-  width: 0.25em;
-  height: 0.03em;
+  margin: 0 0.5rem;
+  width: 0.25rem;
+  height: 0.03rem;
   background: var(--text);
   content: '';
   vertical-align: middle;
@@ -188,18 +189,45 @@ transition: 0.8s;
   .hex:nth-child(7n+5){ /* first hexagon of even rows */
     margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
   }
+  #demo1 {
+    color: var(--text);
+    text-transform: capitalize;
+    text-align: center;
+    bottom: 58%;
+    padding-top:50%;
+    font-size: 0.5rem;
+    z-index: 1;
+  }
+  #demo2 {
+    font-size: 1rem;
+    top: 20%;
+  }
 }
 
 @media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
   #hexGrid{
     padding-bottom: 7.4%;
-    font-size: 14px;
+    font-size: 1rem;
   }
   .hex {
     width: 33.333%; /* = 100 / 3 */
   }
   .hex:nth-child(5n+4){ /* first hexagon of even rows */
     margin-left:16.666%;  /* = width of .hex / 2  to indent even rows */
+  }
+
+  #demo1 {
+    color: var(--text);
+    text-transform: capitalize;
+    text-align: center;
+    bottom: 22.5%;
+    padding-top:50%;
+    font-size: 1.4rem!important;
+    z-index: 1;
+  }
+
+  #demo2 {
+    display: none;
   }
 }
 
@@ -214,14 +242,14 @@ transition: 0.8s;
   .hex:nth-child(3n+3){ /* first hexagon of even rows */
     margin-left:25%;  /* = width of .hex / 2  to indent even rows */
   }
+  #demo1 {
+    font-size: 0.3rem;
+  }
+
 }
 
 @media (max-width: 400px) {
     #hexGrid {
         font-size: 8px;
     }
-
-
-
-
 }
