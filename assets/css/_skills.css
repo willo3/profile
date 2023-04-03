@@ -1,4 +1,12 @@
+.skills {
+  width: 100%;
+  height: 100%;
 
+}
+
+h1 {
+  color: var(--text);
+}
 
 #hexGrid {
   display: flex;
@@ -64,14 +72,25 @@
   width: auto;
   height: 100%;
   margin: 0 auto;
+  padding: 5rem;
 }
 
-.hex h1, .hex p {
+.hex h1 {
   width: 100%;
   padding: 5%;
   box-sizing:border-box;
   font-weight: 300;
   opacity: 0;
+  font-size: 5rem;
+}
+
+.hex p {
+  width: 100%;
+  padding: 5%;
+  box-sizing:border-box;
+  font-weight: 300;
+  opacity: 0;
+  font-size: 1.25rem;
 }
 
 #demo1 {
