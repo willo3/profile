@@ -72,32 +72,32 @@ h1 {
   width: auto;
   height: 100%;
   margin: 0 auto;
-  padding: 5rem;
+  /* padding: 5rem; */
 }
 
 .hex h1 {
   width: 100%;
   padding: 5%;
   box-sizing:border-box;
-  font-weight: 300;
+  font-weight: 800;
   opacity: 0;
-  font-size: 5rem;
+  font-size: 1.9rem!important;
 }
 
 .hex p {
   width: 100%;
   padding: 5%;
   box-sizing:border-box;
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 #demo1 {
   color: var(--text);
   text-transform: capitalize;
-    text-align: center;
-  bottom: 50%;
+  text-align: center;
+  bottom: 60%;
   padding-top:50%;
   font-size: 1.5em;
   z-index: 1;
@@ -115,7 +115,7 @@ h1 {
 }
 
 #demo2 {
-top: 50%;
+top: 22.5%;
 text-align: center;
 text-transform: uppercase;
 
