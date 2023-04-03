@@ -4,6 +4,7 @@
 @import "./_animations.css";
 @import "./_buttons.css";
 @import "./_colors.css";
+@import "./_contact.css";
 @import "./_electricity.css";
 @import "./_hex-grid.css";
 @import "./_home.css";
@@ -55,4 +56,5 @@ body {
 section {
   min-height: 85vh;
   padding: 10rem 9% 2rem;
+  z-index: 100!important;
 }

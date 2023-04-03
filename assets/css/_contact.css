@@ -1,0 +1,45 @@
+.contact {
+  z-index: 100!important;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  padding: 0 10%;
+  justify-content: space-between;
+  padding: 70px 10% 0;
+  background-color: var(--background);
+}
+
+.action {
+  z-index: 100!important;
+}
+
+.contact h2 {
+  z-index: 100!important;
+}
+
+.contact .heading {
+  z-index: 100!important;
+}
+
+.form {
+  z-index: 100!important;
+}
+
+.contact-form-box {
+  z-index: 100!important;
+}
+
+
+
+
+ /* {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: break-word!important;
+  word-wrap: break-word!important;
+  white-space: nowrap!important;
+  z-index: 100!important;
+} */
