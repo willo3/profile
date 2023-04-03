@@ -3,12 +3,21 @@
   width: 100%;
   height: 100%;
   display: flex;
-  /* flex-wrap: wrap; */
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0 10%;
-  justify-content: space-between;
-  padding: 70px 10% 0;
-  background-color: var(--background);
+  /* padding: 70px 10% 0; */
+}
+
+.contact .contact-wrapper {
+  z-index: 100!important;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: top;
 }
 
 .action {
@@ -17,29 +26,91 @@
 
 .contact h2 {
   z-index: 100!important;
+  margin-bottom: 0.5rem;
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact .contact-content h2 {
+  color: transparent;
+}
+
+.contact-content {
+  max-width: 100%;
+  margin-left: 10rem;
+  text-align: left;
+  margin-bottom: 3rem;
+  z-index: 100!important;
+}
+
+.contact-content h3 {
+  z-index: 100!important;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  align-items: left;
+}
+
+.contact-content p {
+  z-index: 100!important;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  align-items: left;
+}
+
+.contact-content {
+  z-index: 100!important;
+  align-items: left!important;
 }
 
 .contact .heading {
   z-index: 100!important;
 }
 
-.form {
+contact form {
+  max-width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 4rem;
   z-index: 100!important;
 }
 
-.contact-form-box {
+.contact form .contact-form-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   z-index: 100!important;
 }
 
+.contact form .contact-form-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  color: var(--text);
+  background: var(--background);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
 
+.contact form .contact-form-box input {
+  width: 49%;
+}
 
+.contact form textarea {
+  resize: none;
+}
 
- /* {
-  font-size: 5.6rem;
-  font-weight: 700;
-  line-height: 1.2;
-  overflow-wrap: break-word!important;
-  word-wrap: break-word!important;
-  white-space: nowrap!important;
+.contact .hex-button .hex-border {
   z-index: 100!important;
-} */
+}
+
+a.hex-button.hex-border {
+  margin-left: 1.75rem;
+  margin-top: 1rem;
+  cursor: pointer;;
+}

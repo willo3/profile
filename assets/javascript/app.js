@@ -1,17 +1,22 @@
+// Find the input button and create a new anchor element
+var inputButton = document.querySelector('input[type="submit"]');
+var anchorElement = document.createElement('a');
 
+// Copy the button text and classes to the anchor element
+anchorElement.innerHTML = inputButton.value;
+anchorElement.className = inputButton.className;
 
+// Copy any relevant attributes to the anchor element
+var attributes = inputButton.attributes;
+for (var i = 0; i < attributes.length; i++) {
+  var attr = attributes[i];
+  if (attr.name !== 'type' && attr.name !== 'value' && attr.name !== 'class') {
+    anchorElement.setAttribute(attr.name, attr.value);
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+// Replace the input button with the anchor element
+inputButton.parentNode.replaceChild(anchorElement, inputButton);
 
 
 
