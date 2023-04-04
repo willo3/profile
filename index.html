@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- <base href="/profile/"> -->
   </head>
@@ -294,30 +295,28 @@
       </section>
 
 
-            <!-- Contact Section -->
+      <!-- Contact Section -->
       <section class="contact" id="contact">
-
-
         <div class="contact-wrapper">
-          <form action="#" class="action">
+          <form id="contact-form">
             <h2>Contact Me</h2>
-            <div class="contact-form-box">
-              <input type="text" placeholder="Full Name">
-              <input type="email" placeholder="Email">
+            <div class="contact-form-box1">
+              <input type="text" placeholder="Name" name="user_name">
+              <input type="email" placeholder="Email" name="user_email">
             </div>
-            <div class="contact-form-box">
-              <input type="number" placeholder="Mobile Number">
-              <input type="text" placeholder="Email Subject">
+            <div class="contact-form-box2">
+              <input id="phone" type="number" placeholder="Phone Number" name="contact_number">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="hex-button hex-border">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send" class="hex-button hex-border">
           </form>
           <div class="contact-content">
             <h2 class="heading"><span></span></h2>
             <h2>Details</h2>
             <h3>Mobile:</h3>
             <p>+447380 158 411</p>
-            <h3>email:</h3>            <p>wrparker@gmail.com</p>
+            <h3>email:</h3>
+            <p>wrparker@gmail.com</p>
             <h3></h3>
             <p></p>
           </div>

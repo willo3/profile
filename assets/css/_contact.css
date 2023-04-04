@@ -81,14 +81,16 @@ contact form {
   z-index: 100!important;
 }
 
-.contact form .contact-form-box {
+.contact form .contact-form-box1,
+.contact form .contact-form-box2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   z-index: 100!important;
 }
 
-.contact form .contact-form-box input,
+.contact form .contact-form-box1 input,
+.contact form .contact-form-box2 input,
 .contact form textarea {
   width: 100%;
   padding: 1.5rem;
@@ -99,8 +101,12 @@ contact form {
   margin: 0.7rem 0;
 }
 
-.contact form .contact-form-box input {
+.contact form .contact-form-box1 input {
   width: 49%;
+}
+
+.contact form .contact-form-box2 input {
+  width: 100%!important;
 }
 
 .contact form textarea {

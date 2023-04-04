@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "jquery": "^3.6.4",
     "serve": "^14.2.0"
   },
@@ -7,4 +8,3 @@
     "start": "serve -s . -l ${PORT:-3000}"
   }
 }
- 
