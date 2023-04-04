@@ -69,6 +69,15 @@
   align-items: left!important;
 }
 
+.contact-content h3,
+.contact-content p {
+  padding-left: 1rem;
+}
+
+.contact-content a.hex-button.hex-border {
+  margin-left: 0rem;
+}
+
 .contact .heading {
   z-index: 100!important;
 }
@@ -120,5 +129,11 @@ contact form {
 a.hex-button.hex-border {
   margin-left: 1.75rem;
   margin-top: 1rem;
+  cursor: pointer;;
+}
+
+a.hex-button.hex-border#cv-pdf {
+  margin-left: 0rem;
+  margin-top: 2.5rem;
   cursor: pointer;;
 }
