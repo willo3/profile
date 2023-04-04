@@ -8,16 +8,18 @@
   align-items: center;
   padding: 0 10%;
   /* padding: 70px 10% 0; */
+  background-color: transparent;
 }
 
 .contact .contact-wrapper {
-  z-index: 100!important;
+  z-index: 999!important;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: top;
+  background-color: transparent;
 }
 
 .action {

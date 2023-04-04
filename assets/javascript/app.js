@@ -107,12 +107,12 @@ function matrixString(){
     $("#text-output").append("<div style='color:" + textCol2 + "; text-shadow: 0px 0px 15px " + textCol2 + ", 0px 0px 10px " + textCol2 + ", 0px 0px 5px " + textCol2 + "; top:-500px; left:" + leftPos + "px' class='matrixString ms-col2'>" + singleStream.join("") + "</div>");
   }
 
-  // Remove the finished Strings
-  $('.matrixString').each(function(i, obj) {
-    if($(this).offset().top > 1500){
-      $(this).remove();
-    }
-  });
+// Remove the finished Strings
+$('.matrixString').each(function(i, obj) {
+  if($(this).offset().top > ($(document).height() - $(window).height())){
+    $(this).remove();
+  }
+});
 
   // Recursive Function Call with a randomized Delay
   setTimeout(function() {
