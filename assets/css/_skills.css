@@ -90,7 +90,7 @@ h1 {
 
 #demo1 {
   color: var(--text);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   text-align: center;
   bottom: 60%;
   padding-top:50%;
@@ -191,7 +191,7 @@ transition: 0.8s;
   }
   #demo1 {
     color: var(--text);
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     text-align: center;
     bottom: 58%;
     padding-top:50%;
@@ -218,7 +218,7 @@ transition: 0.8s;
 
   #demo1 {
     color: var(--text);
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     text-align: center;
     bottom: 22.5%;
     padding-top:50%;
