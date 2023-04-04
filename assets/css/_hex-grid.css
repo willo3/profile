@@ -28,3 +28,7 @@
   );
   z-index: -1;
 }
+
+.hexLink {
+  cursor: pointer;
+}
