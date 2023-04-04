@@ -39,6 +39,30 @@ li {
   position: relative;
 }
 
+span.neonTextA, span.neonTextB {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 5rem;
+  font-weight: 100!important;
+}
+
+.neonTextA {
+  animation: pulsateA 0.11s ease-in-out infinite alternate;
+  color: #fff;
+  /* text-shadow:
+    0 0 35px var(--primary),
+    0 0 65px var(--primary),
+    0 0 80px var(--primary); */
+}
+
+.neonTextB {
+  animation: pulsateB 0.11s ease-in-out infinite alternate;
+  color: #fff;
+  /* text-shadow:
+    0 0 35px var(--secondary),
+    0 0 65px var(--secondary),
+    0 0 80px var(--secondary); */
+}
+
 .navbar .links {
   display: flex;
   gap: 3rem;
