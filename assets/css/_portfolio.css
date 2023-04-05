@@ -1,0 +1,35 @@
+.portfolio {
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  padding: 0 10%;
+  justify-content: space-between;
+  padding: 70px 10% 0;
+}
+
+.portfolio.wrapper {
+  z-index: 200;
+}
+
+.portfolio.wrapper.accordian {
+  z-index: 200;
+}
+
+.portfolio.wrapper.accordian.accordian-panel {
+  z-index: 200;
+}
+
+.portfolio.wrapper.accordian.accordian-panel h2 {
+  z-index: 200;
+}
+
+.portfolio.wrapper.accordian.accordian-panel h2
+
+
+
+.portfolio.wrapper.accordian.accordian-panel h2.span#panel1-title {
+  z-index: 200;
+}
