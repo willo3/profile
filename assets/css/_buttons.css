@@ -196,3 +196,62 @@
 .hex-button:hover{
 	color:#fff;
 }
+
+
+.hex-button{
+  position: relative;
+	display:block;
+	background: transparent;
+	width:200px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:15px;
+	text-decoration:none;
+	text-transform:uppercase;
+
+}
+.hex-button:before, .hex-button:after {
+	width:200px;
+  left: 0px;
+	height:27px;
+  z-index: -1;
+}
+
+.hex-border{ color: var(--secondary); }
+
+
+/* Hex-button Border Style */
+.hex-border:before,.hex-border:after {
+	border: 3px solid var(--secondary);
+}
+
+
+.hex-button:before{
+  position: absolute;
+  content: '';
+  border-bottom: none;
+  -webkit-transform: perspective(15px) rotateX(5deg);
+  -moz-transform: perspective(15px) rotateX(5deg);
+  transform: perspective(15px) rotateX(5deg);
+}
+.hex-button:after{
+  position: absolute;
+  top: 32px;
+  content: '';
+  border-top: none;
+  -webkit-transform: perspective(15px) rotateX(-5deg);
+  -moz-transform: perspective(15px) rotateX(-5deg);
+  transform: perspective(15px) rotateX(-5deg);
+}
+
+/* Hex-button Hover Style */
+.hex-border:hover:before, .hex-border:hover:after {
+	background: linear-gradient(
+    90deg, var(--primary) 0%, var(--secondary) 100%
+  );
+}
+
+.hex-button:hover{
+	color:#fff;
+}
