@@ -10,22 +10,22 @@
   padding: 70px 10% 0;
 }
 
-.portfolio.wrapper {
+.portfolio .wrapper {
   z-index: 200;
 }
 
-.portfolio.wrapper.accordian {
+.portfolio .wrapper .accordian {
   z-index: 200;
 }
 
-.portfolio.wrapper.accordian.accordian-panel {
+.portfolio .wrapper .accordian .accordian-panel {
   z-index: 200;
 }
 
-.portfolio.wrapper.accordian.accordian-panel h2 {
+.portfolio .wrapper .accordian .accordian-panel h2 {
   z-index: 200;
 }
 
-.portfolio.wrapper.accordian.accordian-panel h2.span#panel1-title {
+.portfolio .wrapper .accordian .accordian-panel h2 .span #panel1-title {
   z-index: 200;
 }
