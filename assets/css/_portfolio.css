@@ -28,6 +28,13 @@ margin-top: 10rem;
   margin: 0;
 }
 
+@media (min-width: 45em) {
+  .accordion {
+    flex-direction: row;
+    height: 70rem;
+  }
+}
+
 .accordion-panel {
   position: relative;
   isolation: isolate;
@@ -39,6 +46,7 @@ margin-top: 10rem;
 
 .accordion-panel:has([aria-expanded="true"]) {
   flex-basis: clamp(60rem, 40vh, 20rem);
+  flex-grow: 1;
 }
 
 .accordion-content > p {
@@ -49,23 +57,12 @@ margin-top: 10rem;
   color: var(--text);
   text-shadow: 0 0 2px black;
   font-size: 2rem;
-  transform: translateY(2rem);
-}
-
-.accordion-content > ul {
-  opacity: 0;
-  font-weight: 600;
-  margin-left: calc(var(--_button-size) + var(--_panel-gap));
-  margin-right: calc(var(--_button-size) + var(--_panel-gap));
-  color: var(--text);
-  text-shadow: 0 0 2px black;
-  font-size: 2rem;
-  transform: translateY(2rem);
+  transform: translateY(4rem);
 }
 
 .accordion-panel:has([aria-expanded="true"]) .accordion-content > p,
 .accordion-panel:has([aria-expanded="true"]) .accordion-content > ul {
-  transform: translateY(0)!important;
+  transform: translateY(2)!important;
   opacity: 1!important;
 }
 
@@ -85,11 +82,10 @@ margin-top: 10rem;
 
 @media (prefers-reduced-motion: no-preference) {
   .accordion-panel {
-    transition: flex-basis 500ms;
+    transition: flex-basis 500ms, flex-grow 500ms;
   }
-  .accordion-panel:has([aria-expanded="true"]) .accordion-content > p,
-  .accordion-panel:has([aria-expanded="true"]) .accordion-content > ul {
-    transition: transform 500ms 250ms, opacity 950ms 250ms;
+  .accordion-panel:has([aria-expanded="true"]) .accordion-content > p {
+    transition: transform 500ms 500ms, opacity 950ms 500ms;
   }
 }
 
@@ -101,12 +97,15 @@ margin-top: 10rem;
 }
 #accordion-icon1 {
   background: hsl(0 0% 0% / 0.25);
+  z-index: 1;
 }
 #accordion-icon2 {
   background: hsl(0 0% 0% / 0.25);
+  z-index: 1;
 }
 #accordion-icon3 {
-  background: hsl(0, 0%, 100%, 0.05);
+  background: hsl(0, 0%, 100%, 0.45);
+  z-index: 1;
 }
 
 .accordion-trigger {
@@ -119,46 +118,96 @@ margin-top: 10rem;
   border: 0;
   font-weight: 700;
   font-size: 2.75rem;
-  position: relative;
 }
 #panel1-title {
   color: rgb(255, 55, 55);
-  text-shadow: 0 0 3px white;
+  text-shadow: 0 0 1px white;
   /* text-shadow: 0 0 5px black; */
-
+  z-index: 1;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
 }
 #panel2-title {
   color: rgb(255, 208, 0);
   text-shadow: 0 0 4px black;
+  z-index: 1;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
 }
 #panel3-title {
   color: #ff70e2;
-  text-shadow: 0 0 2px black;
+  text-shadow: 0 0 5px black;
+  z-index: 1;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
 }
 
-@media (max-width: 719px) {
-  .accordion-trigger::after{
-    content: '';
+  #panel1-title::after {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: pink;
+    background: hsl(0 0% 0% / 0.5);
+    z-index: -1;
+    border-radius: 100vw;
     }
-  #panel2-title::after{
-    content: '';
+  #panel2-title::after {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: pink;
+    background: hsl(0 0% 0% / 0.5);
+    z-index: -1;
+    border-radius: 100vw;
     }
   #panel3-title::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: var(--_button-size);
-  background: pink;
-  }
+    content: "";
+    position: absolute;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
+    height: var(--_button-size);
+    background: hsl(0 0% 100% / 0.45);
+    z-index: -1;
+    border-radius: 100vw;
+    }
+
+@media (max-width: 719px) {
+  #panel1-title::after {
+    content: "";
+    position: absolute;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
+    height: var(--_button-size);
+    background: hsl(0 0% 0% / 0.75);
+    z-index: -1;
+    border-radius: 100vw;
+    }
+  #panel2-title::after {
+    content: "";
+    position: absolute;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
+    height: var(--_button-size);
+    background: hsl(0 0% 0% / 0.75);
+    z-index: -1;
+    border-radius: 100vw;
+    }
+  #panel3-title::after {
+    content: "";
+    position: absolute;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
+    height: var(--_button-size);
+    background: hsl(0 0% 100% / 0.45);
+    z-index: -1;
+    border-radius: 100vw;
+    }
 }
