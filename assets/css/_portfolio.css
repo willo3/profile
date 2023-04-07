@@ -35,8 +35,6 @@ margin-top: 10rem;
   padding: var(--_panel-padding);
   flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
   border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
-
-  transition: flex-basis 500ms;
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
@@ -44,7 +42,7 @@ margin-top: 10rem;
 }
 
 .accordion-content > p {
-  /* opacity: 0; */
+  opacity: 0;
   font-weight: 600;
   margin-left: calc(var(--_button-size) + var(--_panel-gap));
   color: var(--text);
@@ -53,10 +51,10 @@ margin-top: 10rem;
   transform: translateY(2rem);
 }
 
-.accordion-panel:has([aria-expanded="true"] .accordion-content) > p {
+.accordion-panel:has([aria-expanded="true"]) .accordion-content > p {
   transform: translateY(0)!important;
   opacity: 1!important;
-  transition: transform 500ms;
+  transition: transform 500ms 250ms, opacity 950ms 250ms;
 }
 
 .accordion-image {
@@ -66,7 +64,17 @@ margin-top: 10rem;
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  transition: filter 500ms;
+}
 
+.accordion-panel:has([aria-expanded="true"]) .accordion-image {
+  filter: brightness(0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-panel {
+    transition: flex-basis 500ms;
+  }
 }
 
 .accordion-icon {
