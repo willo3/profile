@@ -39,13 +39,15 @@ li {
   position: relative;
 }
 
-span.neonTextA, span.neonTextB {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 5rem;
-  font-weight: 100!important;
+@media (min-width: 1265px){
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5rem;
+    font-weight: 100!important;
+  }
 }
 
-@media (max-width: 686px) {
+@media (min-width: 1165px) and (max-width: 1264px){
   span.neonTextA, span.neonTextB {
     font-family: 'Press Start 2P', cursive;
     font-size: 4rem;
@@ -53,10 +55,50 @@ span.neonTextA, span.neonTextB {
   }
 }
 
-@media (max-width: 586px) {
+@media (min-width: 1065px) and (max-width: 1164px){
   span.neonTextA, span.neonTextB {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
+    font-weight: 100!important;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1064px){
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.25rem;
+    font-weight: 100!important;
+  }
+}
+
+@media (min-width: 687px) and (max-width: 992px){
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    font-weight: 100!important;
+  }
+}
+
+@media (min-width: 587px) and (max-width: 686px) {
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    font-weight: 100!important;
+  }
+}
+
+@media (min-width: 487px) and (max-width: 586px) {
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    font-weight: 100!important;
+  }
+}
+
+@media (max-width: 486px) {
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
     font-weight: 100!important;
   }
 }
