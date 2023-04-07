@@ -44,6 +44,8 @@ margin-top: 10rem;
   border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
   -webkit-box-shadow:0 0 15px var(--primary);
   box-shadow:0 0 15px var(--primary);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
