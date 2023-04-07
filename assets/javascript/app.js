@@ -11,7 +11,9 @@ accordion.addEventListener('click', (e) => {
 
 function toggleAccordion(panelToActivate) {
   const buttons = panelToActivate.parentElement.querySelectorAll("button");
-  const contents = panelToActivate.parentElement.querySelectorAll(".accordion-content")
+  const contents = panelToActivate.parentElement.querySelectorAll(".accordion-content");
+  const titles = panelToActivate.parentElement.querySelectorAll(".panel-title");
+  console.log(titles);
 
   buttons.forEach(button => {
     button.setAttribute("aria-expanded", false);
@@ -22,6 +24,11 @@ function toggleAccordion(panelToActivate) {
     content.setAttribute("aria-hidden", true);
   });
   panelToActivate.querySelector(".accordion-content").setAttribute("aria-hidden", false);
+
+  titles.forEach(title => {
+    title.setAttribute("aria-hidden", true);
+  });
+  panelToActivate.querySelector(".panel-title").setAttribute("aria-hidden", false);
 };
 
 

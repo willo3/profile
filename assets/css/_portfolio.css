@@ -28,7 +28,7 @@ margin-top: 10rem;
   margin: 0;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 719px) {
   .accordion {
     flex-direction: row;
     height: 70rem;
@@ -58,6 +58,24 @@ margin-top: 10rem;
   text-shadow: 0 0 2px black;
   font-size: 2rem;
   transform: translateY(4rem);
+}
+
+@media (min-width: 1090px) {
+  .accordion-content > p {
+    margin-right: calc((var(--_button-size) + var(--_panel-gap)) * 3)!important;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1089) {
+  .accordion-content > p {
+    margin-right: calc((var(--_button-size) + var(--_panel-gap)) * 2)!important;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 989) {
+  .accordion-content > p {
+    margin-right: calc(var(--_button-size) + var(--_panel-gap))!important;
+  }
 }
 
 .accordion-panel:has([aria-expanded="true"]) .accordion-content > p,
@@ -119,6 +137,11 @@ margin-top: 10rem;
   font-weight: 700;
   font-size: 2.75rem;
 }
+.panel-title:has([aria-hidden="true"]) #panel1-title,
+.panel-title:has([aria-hidden="true"]) #panel2-title,
+.panel-title:has([aria-hidden="true"]) #panel3-title {
+  display: none;
+}
 #panel1-title {
   color: rgb(255, 55, 55);
   text-shadow: 0 0 1px white;
@@ -146,6 +169,7 @@ margin-top: 10rem;
   isolation: isolate;
   display: grid;
   align-items: center;
+
 }
 
   #panel1-title::after {
