@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Navbar
 const activeSection = document.querySelector(".navbar");
 
-navbar.addEventListener('click', (e) => {
+activeSection.addEventListener('click', (e) => {
   const activeSection = e.target.closest(".href");
   console.log(activeSection)
 });
