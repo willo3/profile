@@ -5,8 +5,14 @@ const activeSection = document.querySelector(".navbar");
 
 activeSection.addEventListener('click', (e) => {
   const activeSection = e.target.closest("a");
-  console.log(activeSection)
+  console.log(activeSection);
+  toggleActiveSection(activeSection);
 });
+
+function toggleActiveSection(linkToActivate) {
+  const links = linkToActivate.parentElement.querySelectorAll('a');
+  console.log(links);
+}
 
 // Accordion
 const accordion = document.querySelector(".accordion");
