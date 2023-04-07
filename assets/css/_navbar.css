@@ -45,6 +45,22 @@ span.neonTextA, span.neonTextB {
   font-weight: 100!important;
 }
 
+@media (max-width: 686px) {
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    font-weight: 100!important;
+  }
+}
+
+@media (max-width: 586px) {
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    font-weight: 100!important;
+  }
+}
+
 .neonTextA {
   animation: pulsateA 0.11s ease-in-out infinite alternate;
   color: #fff;

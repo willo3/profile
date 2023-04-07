@@ -45,16 +45,28 @@ margin-top: 10rem;
   opacity: 0;
   font-weight: 600;
   margin-left: calc(var(--_button-size) + var(--_panel-gap));
+  margin-right: calc(var(--_button-size) + var(--_panel-gap));
   color: var(--text);
   text-shadow: 0 0 2px black;
   font-size: 2rem;
   transform: translateY(2rem);
 }
 
-.accordion-panel:has([aria-expanded="true"]) .accordion-content > p {
+.accordion-content > ul {
+  opacity: 0;
+  font-weight: 600;
+  margin-left: calc(var(--_button-size) + var(--_panel-gap));
+  margin-right: calc(var(--_button-size) + var(--_panel-gap));
+  color: var(--text);
+  text-shadow: 0 0 2px black;
+  font-size: 2rem;
+  transform: translateY(2rem);
+}
+
+.accordion-panel:has([aria-expanded="true"]) .accordion-content > p,
+.accordion-panel:has([aria-expanded="true"]) .accordion-content > ul {
   transform: translateY(0)!important;
   opacity: 1!important;
-  transition: transform 500ms 250ms, opacity 950ms 250ms;
 }
 
 .accordion-image {
@@ -74,6 +86,10 @@ margin-top: 10rem;
 @media (prefers-reduced-motion: no-preference) {
   .accordion-panel {
     transition: flex-basis 500ms;
+  }
+  .accordion-panel:has([aria-expanded="true"]) .accordion-content > p,
+  .accordion-panel:has([aria-expanded="true"]) .accordion-content > ul {
+    transition: transform 500ms 250ms, opacity 950ms 250ms;
   }
 }
 
@@ -103,17 +119,46 @@ margin-top: 10rem;
   border: 0;
   font-weight: 700;
   font-size: 2.75rem;
+  position: relative;
 }
 #panel1-title {
   color: rgb(255, 55, 55);
   text-shadow: 0 0 3px white;
   /* text-shadow: 0 0 5px black; */
+
 }
 #panel2-title {
   color: rgb(255, 208, 0);
   text-shadow: 0 0 4px black;
 }
 #panel3-title {
-  color: var(--text);
+  color: #ff70e2;
   text-shadow: 0 0 2px black;
+}
+
+@media (max-width: 719px) {
+  .accordion-trigger::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--_button-size);
+    background: pink;
+    }
+  #panel2-title::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--_button-size);
+    background: pink;
+    }
+  #panel3-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--_button-size);
+  background: pink;
+  }
 }
