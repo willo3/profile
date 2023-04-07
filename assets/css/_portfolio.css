@@ -18,40 +18,91 @@
   max-width: 120rem;
   margin-inline: auto;
   padding: 1rem;
-
 }
 
-.accordian {
+.accordion {
+  --_button-size: 7rem;
+  --_panel-padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: transparent;
 }
 
-.accordian .accordian-panel {
+.accordion * {
+  margin: 0;
+}
+
+.accordion-panel {
   position: relative;
   isolation: isolate;
+  overflow: hidden;
+  padding: var(--_panel-padding);
+  flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
+  border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
 }
 
-.accordian-image {
+.accordion-panel:has([aria-expanded="true"]) {
+  flex-basis: clamp(60rem, 40vh, 20rem);
+}
+
+.accordion-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
+
 }
 
-.accordian .accordian-icon {
-  width: 3rem;
+.accordion-icon {
+  width: var(--_button-size);
   aspect-ratio: 1 / 1;
   padding: 0.75rem;
   border-radius: 50%;
 }
-
-.portfolio .wrapper .accordian .accordian-panel h2 {
-
+#accordion-icon1 {
+  background: hsl(0 0% 0% / 0.25);
+}
+#accordion-icon2 {
+  background: hsl(0 0% 0% / 0.25);
+}
+#accordion-icon3 {
+  background: hsl(0, 0%, 100%, 0.05);
 }
 
-.portfolio .wrapper .accordian .accordian-panel h2 .span #panel1-title {
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+#panel1-title {
+  color: rgb(255, 55, 55);
+  text-shadow: 0 0 3px white;
+  /* text-shadow: 0 0 5px black; */
+}
+#panel2-title {
+  color: rgb(255, 208, 0);
+  text-shadow: 0 0 4px black;
+}
+#panel3-title {
+  color: var(--text);
+  text-shadow: 0 0 2px black;
+}
 
+.accordion-content > p {
+  opacity: 0 ;
+  font-weight: 600;
+  margin-left: 1rem;
+  color: var(--text);
+  text-shadow: 0 0 2px black;
+  font-size: 2rem;
+  transform: translateY(2rem);
 }

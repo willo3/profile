@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+// Accordion
+const accordion = document.querySelector(".accordion");
+
+accordion.addEventListener('click', (e) => {
+  const activePanel = e.target.closest(".accordion-panel");
+  if (!activePanel) return;
+});
+
+function toggleAccordion(panelToActivate) {
+  const buttons = panelToActivate.parentElement.querySelectorAll("button");
+  console.log("buttons");
+  buttons.forEach((button) => {
+    button.setAttribute("aria-expanded", false)
+  });
+}
+
+
+
 // Find the input button and create a new anchor element
 var inputButton = document.querySelector('input[type="submit"]');
 var anchorElement = document.createElement('a');
@@ -25,7 +45,6 @@ inputButton.parentNode.replaceChild(anchorElement, inputButton);
   emailjs.init('jABSYFjlhVlOM9dDr');
 })();
 
-window.onload = function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
       // generate a five digit number for the contact_number variable
@@ -38,7 +57,7 @@ window.onload = function() {
               console.log('FAILED...', error);
           });
   });
-}
+
 
 
 // Event Listener for Scroll Animations
@@ -46,16 +65,14 @@ window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 }, false);
 
-// Event listener for glowing light
-document.addEventListener("DOMContentLoaded", function() {
+// Glowing light
   const light = document.querySelector('.light');
-
   // Makes light glow follow mouse pointer
   document.addEventListener("mousemove", function (e) {
     light.style.left = `${e.clientX}px`;
     light.style.top = `${e.clientY}px`;
   });
-});
+
 
 jQuery(function(){ //Add class to parent element to margin properly
 	jQuery(".hb-lg").parent().addClass("hb-lg-margin");
@@ -153,3 +170,5 @@ $('.matrixString').each(function(i, obj) {
   $(".matrixString").animate({ "top": "1500px" }, ranSpeed );
 }
 matrixString();
+
+});
