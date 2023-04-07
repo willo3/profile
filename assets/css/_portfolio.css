@@ -80,6 +80,9 @@ margin-top: 10rem;
   }
 }
 
+
+
+
 .accordion-panel:has([aria-expanded="true"]) .accordion-content > p,
 .accordion-panel:has([aria-expanded="true"]) .accordion-content > ul {
   transform: translateY(2)!important;
@@ -206,6 +209,9 @@ margin-top: 10rem;
     }
 
 @media (max-width: 719px) {
+  .accordion-content > p {
+    margin: 0!important;
+  }
   #panel1-title::after {
     content: "";
     position: absolute;
