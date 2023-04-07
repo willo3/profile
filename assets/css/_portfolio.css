@@ -100,7 +100,7 @@ margin-top: 10rem;
 }
 
 .accordion-panel:has([aria-expanded="true"]) .accordion-image {
-  filter: brightness(0.5);
+  filter: brightness(0.25);
 }
 
 @media (prefers-reduced-motion: no-preference) {
