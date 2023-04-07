@@ -1,24 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 // Navbar
-let sections = document.querySelectorAll('section');
-let navlinks = document.querySelectorAll('header nav a');
+const activeSection = document.querySelector(".navbar");
 
-window.onscroll = () => {
-  sections.forEach(section => {
-    let top = window.scrollY;
-    let offset = section.offsetTop - 150;
-    let height = section.offsetHeight;
-    let id = section.getAttribute('id');
-
-    if(top >= offset && top < offset + height) {
-      navlinks.forEach(links => {
-        links.classList.remove('active');
-        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-      });
-    };
-  });
-};
+navbar.addEventListener('click', (e) => {
+  const activeSection = e.target.closest(".href");
+  console.log(activeSection)
+});
 
 // Accordion
 const accordion = document.querySelector(".accordion");
