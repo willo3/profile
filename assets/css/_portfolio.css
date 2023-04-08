@@ -64,6 +64,8 @@ margin-top: 10rem;
   transform: translateY(4rem);
 }
 
+
+
 @media (min-width: 1090px) {
   .accordion-content > p {
     margin-right: calc((var(--_button-size) + var(--_panel-gap)) * 3)!important;
