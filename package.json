@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "hamburgers": "^1.2.1",
     "jquery": "^3.6.4",
+    "node-sass": "^8.0.0",
+    "sass": "^1.61.0",
     "serve": "^14.2.0"
   },
   "scripts": {
