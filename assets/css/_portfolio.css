@@ -134,6 +134,11 @@ margin-top: 10rem;
   background: hsl(0, 0%, 100%, 0.1);
   z-index: 1;
 }
+#accordion-icon4 {
+  background: hsl(0, 0%, 100%, 0.1);
+  z-index: 1;
+}
+
 
 .accordion-trigger {
   display: flex;
@@ -178,7 +183,15 @@ margin-top: 10rem;
   isolation: isolate;
   display: grid;
   align-items: center;
-
+}
+#panel4-title {
+  color: #ff70e2;
+  text-shadow: 0 0 5px black;
+  z-index: 1;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
 }
 
   #panel1-title::after {
@@ -202,6 +215,16 @@ margin-top: 10rem;
     border-radius: 100vw;
     }
   #panel3-title::after {
+    content: "";
+    position: absolute;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
+    height: var(--_button-size);
+    background: hsl(0 0% 100% / 0.1);
+    z-index: -1;
+    border-radius: 100vw;
+    }
+  #panel4-title::after {
     content: "";
     position: absolute;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
@@ -237,6 +260,16 @@ margin-top: 10rem;
     border-radius: 100vw;
     }
   #panel3-title::after {
+    content: "";
+    position: absolute;
+    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+    width: calc(100% + (var(--_button-size) * 1.5));
+    height: var(--_button-size);
+    background: hsl(0 0% 100% / 0.45);
+    z-index: -1;
+    border-radius: 100vw;
+    }
+  #panel4-title::after {
     content: "";
     position: absolute;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
