@@ -565,14 +565,14 @@
           // Close button click event
           span.click(function () {
               modal.fadeOut(500);
-              $(".modal-box").animate({ left: '-75%' });
+              $(".modal-box").animate({ left: '75%' });
           });
 
           // Close modal when clicking outside of it
           $(window).click(function (event) {
               if (event.target == modal[0]) {
                   modal.fadeOut(500);
-                  $(".modal-box").animate({ left: '-75%' });
+                  $(".modal-box").animate({ left: '75%' });
               }
           });
         }
