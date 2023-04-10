@@ -209,8 +209,12 @@
 	font-size:15px;
 	text-decoration:none;
 	text-transform:uppercase;
-
 }
+
+.hex-button#sendButton {
+  margin-top: 1rem;
+}
+
 .hex-button:before, .hex-button:after {
 	width:200px;
   left: 0px;
