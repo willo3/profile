@@ -185,13 +185,14 @@ margin-top: 10rem;
   align-items: center;
 }
 #panel4-title {
-  color: #ff70e2;
+  color: #a376ff;
   text-shadow: 0 0 5px black;
   z-index: 1;
   position: relative;
   isolation: isolate;
   display: grid;
   align-items: center;
+  white-space: nowrap;
 }
 
   #panel1-title::after {
@@ -233,6 +234,7 @@ margin-top: 10rem;
     background: hsl(0 0% 100% / 0.1);
     z-index: -1;
     border-radius: 100vw;
+    white-space: nowrap;
     }
 
 @media (max-width: 719px) {
@@ -278,5 +280,6 @@ margin-top: 10rem;
     background: hsl(0 0% 100% / 0.45);
     z-index: -1;
     border-radius: 100vw;
+    white-space: nowrap;
     }
 }
