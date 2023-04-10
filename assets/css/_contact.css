@@ -138,3 +138,7 @@ a.hex-button.hex-border#cv-pdf {
   margin-top: 2.5rem;
   cursor: pointer;;
 }
+
+#sendButton {
+  margin-left: 2rem;
+}

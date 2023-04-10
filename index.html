@@ -12,7 +12,12 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- <base href="/profile/"> -->
+    <!-- email initiate function-->
+    <script>
+      (function() {
+        emailjs.init("jABSYFjlhVlOM9dDr");
+      })();
+    </script>
   </head>
 
   <body>
@@ -426,8 +431,8 @@
             </div>
 
 
-            <!-- Accordion Panel 4 -->
-            <div class="accordion-panel">
+            Accordion Panel 4
+            <!-- <div class="accordion-panel">
               <h2 id="panel4-heading">
                 <button
                   class="accordion-trigger"
@@ -450,7 +455,7 @@
                 <br>
                 <p>
                   <button style="background-color: var(--secondary); color: black; border: none; padding: 10px 20px; border-radius: 5px; font-size: 2rem; font-weight: 700;">
-                    <a href="file://wsl.localhost/Ubuntu/home/wparker/code/willo3/profile/new.html" style="color: var(--text); text-decoration: none;">Check it out!</a>
+                    <a href="./new/new.html" style="color: var(--text); text-decoration: none;">Check it out!</a>
                   </button>
                 </p>
                 <img
@@ -459,42 +464,125 @@
                   alt="The Website You're Already On"
                 />
               </div>
-            </div>
+            </div> -->
 
       </div>
     </div>
 
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact" id="contact">
-        <div class="contact-wrapper">
-          <form id="contact-form">
-            <h2>Contact Me</h2>
-            <div class="contact-form-box1">
-              <input type="text" placeholder="Name" name="user_name">
-              <input type="email" placeholder="Email" name="user_email">
-            </div>
-            <div class="contact-form-box2">
-              <input id="phone" type="number" placeholder="Phone Number" name="contact_number">
-            </div>
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send" class="hex-button hex-border">
-          </form>
-          <div class="contact-content">
-            <h2 class="heading"><span></span></h2>
-            <h2>Details</h2>
-            <h3>My Deets:</h3>
-            <p>+447380 158 411</p>
-            <!-- <h3>email:</h3> -->
-            <p>wrparker@gmail.com</p>
-            <h3></h3>
-            <p></p>
-            <a href="./assets/documents/CV - William Robert Parker.docx" id="cv-docx" target="_blank" class="hex-button hex-border">Download My CV (docx)</a>
-            <a href="./assets/documents/CV - William Robert Parker.pdf" id="cv-pdf" target="_self" download class="hex-button hex-border">Download My CV (pdf)</a>
+
+ <!-- Contact Section -->
+ <section class="contact" id="contact">
+  <div class="contact-wrapper">
+    <form role="form" class="php-email-form" id="contact-form">
+      <h2>Contact Me</h2>
+      <div class="contact-form-box1">
+        <input type="text" placeholder="Name" name="from_name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
+        <div class="validate"></div>
+        <input type="email" placeholder="Email" name="reply_to" class="form-control" id="email" data-rule="email" data-msg="Please enter a valid email" />
+        <div class="validate"></div>
+      </div>
+      <div class="contact-form-box2">
+        <input id="phone" type="number" class="form-control" placeholder="Phone Number (optional)" name="contact_number" id="contact_number" />
+      </div>
+      <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-control" data-rule="required" data-msg="Please leave a message"></textarea>
+      <div class="validate"></div>
+      <div><button class="hex-button hex-border" id="sendButton" onclick="sendMail()" value="Send" type="submit">Send</button></div>
+      <!-- <input type="submit" id="sendButton" onclick="sendMail()" value="Send" class="hex-button hex-border"> -->
+      <div id="successModal" class="modal">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h2>Your message has been sent</h2>
+            <div class="btn_close">X</div>
+          </div>
+          <div class="modal-content">
+            <p>
+              A confirmation email has been sent
+            </p>
+            <p>
+              I'll get back to you as soon as I can
+            </p>
           </div>
         </div>
-      </section>
+    </div>
+    </form>
+    <div class="contact-content">
+      <h2 class="heading"><span></span></h2>
+      <h2>Details</h2>
+      <h3>My Deets:</h3>
+      <p>+447380 158 411</p>
+      <!-- <h3>email:</h3> -->
+      <p>wrparker@gmail.com</p>
+      <h3></h3>
+      <p></p>
+      <a href="./assets/documents/CV - William Robert Parker.docx" id="cv-docx" target="_blank" class="hex-button hex-border">Download My CV (docx)</a>
+      <a href="./assets/documents/CV - William Robert Parker.pdf" id="cv-pdf" target="_self" download class="hex-button hex-border">Download My CV (pdf)</a>
+    </div>
+  </div>
+</section>
 
     <script src="./assets/javascript/app.js"></script>
+    <script>
+      (function() {
+        function sendMail() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_3a3y7xf', 'template_ci7p1oh', '#contact-form')
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        let contactForm = document.getElementById("contact-form");
+                        contactForm.reset();
+                        showSuccessModal();
+                        // setInterval(() => window.location.reload(true), 3000)
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+  // Call the sendMail function after the DOM content is loaded
+  sendMail();
+});
+
+        function showSuccessModal() {
+          let modal = $("#successModal");
+          let span = $(".btn_close").first();
+
+          var mediaquery = window.matchMedia("(max-width: 600px)");
+
+          // Display modal
+          modal.fadeIn("slow");
+
+          // Animate modal-box depending on the screen width
+          if (mediaquery.matches) {
+              $(".modal-box").animate({ left: '5%' });
+          } else {
+              $(".modal-box").animate({ left: '25%' });
+          }
+
+          // Close button click event
+          span.click(function () {
+              modal.fadeOut(500);
+              $(".modal-box").animate({ left: '-75%' });
+          });
+
+          // Close modal when clicking outside of it
+          $(window).click(function (event) {
+              if (event.target == modal[0]) {
+                  modal.fadeOut(500);
+                  $(".modal-box").animate({ left: '-75%' });
+              }
+          });
+        }
+
+        $(document).ready(function () {
+            // Assuming you want to trigger the showSuccessModal function when the button is clicked
+            $("#btn_modal").click(function () {
+                showSuccessModal();
+            });
+        });
+      })();
+    </script>
   </body>

@@ -1,0 +1,52 @@
+:root {
+  /* Dark Mode Colours */
+  --primary-dark:             #ffc400;
+  --text-on-primary-dark:     #151821;
+  --text-dark:                #fff;
+  --background-dark:          #151821;
+  --background-menu-dark:     #bdcdff;
+
+/* Light Mode Colours */
+  --primary-light:            #ffc400;
+  --text-on-primary-light:    #151821;
+  --text-light:               #000000;
+  --background-light:         #bdcdff;
+  --background-menu-light:    #bdcdff;
+
+/* Cyberpunk Mode Colours */
+  --primary-cyber:            #e92ac3;
+  --secondary-cyber:          #226cff;
+  --background-cyber:         #151821;
+  --text-cyber:               #fff;
+}
+
+.colour-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+  padding: 1rem 3rem;
+  border-radius: 0 0 1rem 1rem;
+  margin-inline: auto;
+  background-color: var(--background-menu);
+}
+
+.colour-picker input[type="radio"] {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--radio-colour);
+  border-radius: 50%;
+}
+
+input[type="radio"]#dark {
+  --radio-colour: var(--primary);
+}
+
+input[type="radio"]#light {
+  --radio-colour: var(--primary);
+}
+
+input[type="radio"]#cyber {
+  --radio-colour: var(--primary);
+}
