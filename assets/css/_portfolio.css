@@ -231,7 +231,7 @@ margin-top: 10rem;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
     width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: hsl(0 0% 100% / 0.1);
+    background: hsl(0 0% 100% / 0.05);
     z-index: -1;
     border-radius: 100vw;
     white-space: nowrap;
@@ -247,7 +247,7 @@ margin-top: 10rem;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
     width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: hsl(0 0% 0% / 0.75);
+    background: hsl(0 0% 0% / 0.5);
     z-index: -1;
     border-radius: 100vw;
     }
@@ -257,7 +257,7 @@ margin-top: 10rem;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
     width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: hsl(0 0% 0% / 0.75);
+    background: hsl(0 0% 0% / 0.5);
     z-index: -1;
     border-radius: 100vw;
     }
@@ -267,7 +267,7 @@ margin-top: 10rem;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
     width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: hsl(0 0% 100% / 0.45);
+    background: hsl(0 0% 100% / 0.5);
     z-index: -1;
     border-radius: 100vw;
     }
@@ -277,9 +277,8 @@ margin-top: 10rem;
     left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
     width: calc(100% + (var(--_button-size) * 1.5));
     height: var(--_button-size);
-    background: hsl(0 0% 100% / 0.45);
+    background: hsl(0 0% 100% / 0.4);
     z-index: -1;
     border-radius: 100vw;
-    white-space: nowrap;
     }
 }
