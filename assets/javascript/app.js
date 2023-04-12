@@ -1,19 +1,37 @@
 (function() {
   document.addEventListener('DOMContentLoaded', () => {
 
-  // Navbar
+  // Navbar Scroll and Active Colour Switch
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('header .navbar a');
   const activeSection = document.querySelector(".navbar");
+  const header = document.querySelector('header');
 
-  activeSection.addEventListener('click', (e) => {
-    const activeSection = e.target.closest("a");
-    console.log(activeSection);
-    toggleActiveSection(activeSection);
-  });
+  function toggleActiveSection() {
+    const top = window.scrollY;
+    const headerHeight = header.offsetHeight;
+    sections.forEach(sec => {
+      let offset = sec.offsetTop - headerHeight;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
 
-  function toggleActiveSection(linkToActivate) {
-    const links = linkToActivate.parentElement.querySelectorAll('a');
-    console.log(links);
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          document.querySelector('header .navbar a[href*=' + id + ']').classList.add('active');
+        });
+      };
+    });
   }
+
+  document.addEventListener('DOMContentLoaded', toggleActiveSection);
+  activeSection.addEventListener('click', toggleActiveSection);
+  window.onscroll = toggleActiveSection;
+
+
+  document.addEventListener('DOMContentLoaded', toggleActiveSection);
+  activeSection.addEventListener('click', toggleActiveSection);
+  window.onscroll = toggleActiveSection;
 
   // Accordion
   const accordion = document.querySelector(".accordion");
@@ -74,11 +92,11 @@
   // Email Functionality
 
 
-
   // Event Listener for Scroll Animations
-  window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-  }, false);
+  // window.addEventListener('scroll', () => {
+  //   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  // }, false);
+
 
   // Glowing light
     const light = document.querySelector('.light');
