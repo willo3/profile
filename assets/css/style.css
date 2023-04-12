@@ -6,6 +6,7 @@
 @import "./_colors.css";
 @import "./_contact.css";
 @import "./_electricity.css";
+@import "./_footer.css";
 @import "./_hex-grid.css";
 @import "./_home.css";
 @import "./_home-animation.css";
@@ -15,6 +16,7 @@
 @import "./_portfolio.css";
 @import "./_responsiveness.css";
 @import "./_skills.css";
+@import "./_spacer.css";
 @import "./_text-type-animation.css";
 
 * {
@@ -28,7 +30,8 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden
+  overflow-x: hidden;
+  /* height: 100%; */
 }
 
 body {

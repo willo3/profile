@@ -1,0 +1,23 @@
+.masked-footer {
+  background-size: cover;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1500px) {
+  .masked-footer {
+    background-size: contain;
+    height: auto;
+  }
+}
+
+@media (min-width: 3738px) {
+  .masked-footer {
+    background-size: 100% auto;
+    height: auto;
+  }
+}
