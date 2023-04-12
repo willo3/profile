@@ -75,3 +75,143 @@
 .missing-button-spacer {
   margin-top: 108px;
 }
+
+
+.profile-picture .picture {
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
+
+.hex-scanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .hex-scanner .row {
+  display: flex;
+  }
+
+  .arrow {
+  width: 0;
+  height: 0;
+  margin: 0 -12px;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 43.2px solid var(--secondary);
+  animation: blink 1s infinite;
+  filter: drop-shadow(0 0 36px var(--secondary));
+  }
+
+  .arrow.down {
+  transform: rotate(180deg);
+  }
+
+  .arrow.outer-1 {
+  animation-delay: -0.1111111111s;
+  }
+
+  .arrow.outer-2 {
+  animation-delay: -0.2222222222s;
+  }
+
+  .arrow.outer-3 {
+  animation-delay: -0.3333333333s;
+  }
+
+  .arrow.outer-4 {
+  animation-delay: -0.4444444444s;
+  }
+
+  .arrow.outer-5 {
+  animation-delay: -0.5555555556s;
+  }
+
+  .arrow.outer-6 {
+  animation-delay: -0.6666666667s;
+  }
+
+  .arrow.outer-7 {
+  animation-delay: -0.7777777778s;
+  }
+
+  .arrow.outer-8 {
+  animation-delay: -0.8888888889s;
+  }
+
+  .arrow.outer-9 {
+  animation-delay: -1s;
+  }
+
+  .arrow.outer-10 {
+  animation-delay: -1.1111111111s;
+  }
+
+  .arrow.outer-11 {
+  animation-delay: -1.2222222222s;
+  }
+
+  .arrow.outer-12 {
+  animation-delay: -1.3333333333s;
+  }
+
+  .arrow.outer-13 {
+  animation-delay: -1.4444444444s;
+  }
+
+  .arrow.outer-14 {
+  animation-delay: -1.5555555556s;
+  }
+
+  .arrow.outer-15 {
+  animation-delay: -1.6666666667s;
+  }
+
+  .arrow.outer-16 {
+  animation-delay: -1.7777777778s;
+  }
+
+  .arrow.outer-17 {
+  animation-delay: -1.8888888889s;
+  }
+
+  .arrow.outer-18 {
+  animation-delay: -2s;
+  }
+
+  .arrow.inner-1 {
+  animation-delay: -0.3333333333s;
+  }
+
+  .arrow.inner-2 {
+  animation-delay: -0.6666666667s;
+  }
+
+  .arrow.inner-3 {
+  animation-delay: -1s;
+  }
+
+  .arrow.inner-4 {
+  animation-delay: -1.3333333333s;
+  }
+
+  .arrow.inner-5 {
+  animation-delay: -1.6666666667s;
+  }
+
+  .arrow.inner-6 {
+  animation-delay: -2s;
+  }
+
+  @keyframes blink {
+  0% {
+  opacity: 0.1;
+  }
+  30% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0.1;
+  }
+  }
