@@ -11,6 +11,7 @@ li {
   left: 0;
   width: 100%;
   background-color: transparent;
+  /* glass effect */
   backdrop-filter: blur(5px);
 }
 
@@ -32,7 +33,7 @@ li {
   align-items: center;
   justify-content: space-between;
   /* glass effect */
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(7, 0, 23, 0.05);
   border-bottom: 2px solid rgba(60, 60, 60, 0.2);
 }
 
@@ -130,6 +131,7 @@ li {
 .navbar .links {
   display: flex;
   gap: 3rem;
+
 }
 
 #menu-icon {
@@ -137,6 +139,7 @@ li {
   cursor: pointer;
   font-size: 4rem;
   color: var(--text);
+  padding-right: 6rem;
 }
 
 /* Dropdown Mobile Menu */
@@ -154,6 +157,10 @@ li {
   border-radius: 0.2rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* glass effect */
+    background: rgba(0, 0, 0, 0.1);
+    /* border-bottom: 2px solid rgba(60, 60, 60, 0.2); */
+
 }
 
 .dropdown_menu.open {
