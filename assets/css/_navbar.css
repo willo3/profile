@@ -147,9 +147,9 @@ li {
   z-index: 9000!important;
   display: none;
   position: absolute;
-  right: 2rem;
-  top: 8rem;
-  width: 30rem;
+  /* right: 2rem; */
+  top: 12.5rem;
+  width: 100%;
   height: 0;
   margin-right: 6rem;
   background: rgb(77, 77, 77);
@@ -158,13 +158,14 @@ li {
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     /* glass effect */
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     /* border-bottom: 2px solid rgba(60, 60, 60, 0.2); */
 
 }
 
 .dropdown_menu.open {
   height: 28rem;
+
 }
 
 .dropdown_menu li {
@@ -182,76 +183,3 @@ li {
   -webkit-background-clip: text;
   background-clip: none;
 }
-
-
-
-
-
-
-
-/* Old Navbar */
-
-/* .header {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 9%;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-}
-
-
-
-.logo {
-  font-size: 3rem;
-  color: var(--text);
-  font-weight: 600;
-  pointer-events: none;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-}
-
-.navbar a {
-  font-size: 2.5rem;
-  color:var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 4rem;
-  animation: slideTop .5s ease forwards;
-  opacity: 0;
-  animation-delay: calc(.2s * var(--i));
-}
-
-.navbar li a.active,
-.navbar li a:hover {
-  background: linear-gradient(45deg, var(--secondary), var(--primary));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: none;
-}
-
-.navbar .toggle_btn {
-  cursor: pointer;
-}
-
-#menu-icon {
-  font-size: 4rem;
-  color: var(--text);
-  display: none;
-}
-
-Responsiveness
-@media (max-width: 992px) {
-  .navbar .a {
-    display: none;
-  }
-
-  .navbar #menu-icon {
-    display: block;
-  }
-} */
