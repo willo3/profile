@@ -4,6 +4,11 @@ li {
   list-style: none;
 }
 
+.header .logo {
+  padding-top: 10px;
+}
+
+
 .header {
   z-index: 201;
   position: fixed;
@@ -44,6 +49,7 @@ li {
   pointer-events: none;
   margin-left: 4rem;
   position: relative;
+  margin-top: 10px;
 }
 
 @media (min-width: 1265px){
