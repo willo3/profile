@@ -126,15 +126,22 @@
   const toggleBtn = document.querySelector('.toggle_btn');
   const toggleBtnIcon = document.querySelector('.toggle_btn i');
   const dropDownMenu = document.querySelector('.dropdown_menu');
+  const dropMenuBlur = document.querySelector('.dropmenu-blur');
 
   toggleBtn.addEventListener('click', function () {
+    // Toggle 'open' class for both dropDownMenu and dropMenuBlur
     dropDownMenu.classList.toggle('open');
+    dropMenuBlur.classList.toggle('open');
+
+    // Check if the dropDownMenu is open
     const isOpen = dropDownMenu.classList.contains('open');
 
+    // Update the toggleBtnIcon based on isOpen
     toggleBtnIcon.className = isOpen
       ? 'fa fa-caret-up'
       : 'fa fa-bars';
   });
+
 
 
   // Electric Current Effect

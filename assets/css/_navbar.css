@@ -158,14 +158,27 @@ li {
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     /* glass effect */
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(7, 0, 23, 0.075);
     /* border-bottom: 2px solid rgba(60, 60, 60, 0.2); */
+}
 
+.dropmenu-blur {
+  display: none;
+  z-index: 200;
+  position: fixed;
+  top: 12.5rem;
+  left: 0;
+  width: 100%;
+  height: 28rem;
+}
+
+.dropmenu-blur.open {
+  display: block;
+  backdrop-filter: blur(7px)!important;
 }
 
 .dropdown_menu.open {
   height: 28rem;
-
 }
 
 .dropdown_menu li {
@@ -182,4 +195,5 @@ li {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: none;
+
 }
