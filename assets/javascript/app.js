@@ -33,6 +33,21 @@
   activeSection.addEventListener('click', toggleActiveSection);
   window.onscroll = toggleActiveSection;
 
+
+// Skills menu
+const hexList = document.querySelectorAll('.hex');
+console.log(hexList);
+const toggleList = document.querySelectorAll('.right-side li');
+console.log(toggleList);
+const skillMenu = document.querySelector(".right-side");
+console.log(skillMenu);
+
+skillMenu.addEventListener('click', (e) => {
+  const activeSkills = e.target.closest("li");
+  console.log(activeSkills);
+  
+});
+
   // Accordion
   const accordion = document.querySelector(".accordion");
 

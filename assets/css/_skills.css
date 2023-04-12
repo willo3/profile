@@ -13,6 +13,13 @@ h1 {
   list-style-type: none;
 }
 
+.hex.visible {
+  visibility: visible;
+}
+.hexIn.visible {
+  visibility: visible;
+}
+
 .hex {
   position: relative;
   visibility:hidden;
@@ -276,13 +283,26 @@ transition: 0.8s;
   background: transparent;
 }
 
+.right-side li {
+  list-style: none;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 5rem!important;
+}
+
 /* Responsive layout */
 @media (max-width: 992px) {
   .left-side,
   .right-side {
-    flex: 1;
+    flex-basis: 100%;
     margin-right: 0;
     margin-left: 0;
     width: 100%;
   }
+  .right-side {
+    display: none;
+  }
 }
+
+
+
