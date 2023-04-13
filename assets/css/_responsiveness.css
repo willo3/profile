@@ -292,13 +292,14 @@
 .home .home-content {
   margin-left: 1.5rem;
 }
-  .navbar .links {
-    display: none;
-    z-index: 101;
-  }
+
+.navbar .links {
+  display: none;
+  z-index: 101;
+}
 
   .navbar #menu-icon {
-    display: block;
+    display: block!important;
     z-index: 101;
   }
 

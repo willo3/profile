@@ -100,11 +100,25 @@ li {
   }
 }
 
-@media (min-width: 487px) and (max-width: 586px) {
+@media (min-width: 515px) and (max-width: 586px) {
   span.neonTextA, span.neonTextB {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
     font-weight: 100!important;
+  }
+}
+
+@media (min-width: 487px) and (max-width: 514px) {
+  span.neonTextA, span.neonTextB {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    font-weight: 100!important;
+  }
+  #menu-icon {
+    padding-right: 3rem!important;
+  }
+  .toggle_btn {
+    padding-right: 0!important;
   }
 }
 
