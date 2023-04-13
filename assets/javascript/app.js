@@ -34,25 +34,94 @@
   window.onscroll = toggleActiveSection;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Skills menu
 const hexList = document.querySelectorAll('.hex');
-console.log(hexList);
 const toggleList = document.querySelectorAll('.right-side li');
-console.log(toggleList);
 const skillMenu = document.querySelector(".right-side");
-console.log(skillMenu);
+
+const originalOrder = Array.from(hexList);
 
 skillMenu.addEventListener('click', (e) => {
   const activeSkills = e.target.closest("li");
-  console.log(activeSkills);
   if (!activeSkills) return;
   toggleSkills(activeSkills);
 });
 
 function toggleSkills(skillsToActivate) {
-  const frontEndSkills = skillsToActivate.parentElement.querySelectorAll(".hex #frontEnd");
-  console.log(frontEndSkills);
-};
+  const skillsText = skillsToActivate.textContent.trim().toLowerCase();
+  let startIndex, endIndex;
+
+  if (skillsText === 'front end') {
+    startIndex = 0;
+    endIndex = 6;
+  } else if (skillsText === 'tools') {
+    startIndex = 6;
+    endIndex = 10;
+  } else if (skillsText === 'back end') {
+    startIndex = 10;
+    endIndex = 15;
+  } else if (skillsText === 'certificates') {
+    startIndex = 15;
+    endIndex = 16;
+  }
+
+  for (let i = startIndex; i < endIndex; i++) {
+    if (hexList[i].style.display === 'none') {
+      hexList[i].style.display = '';
+    } else {
+      hexList[i].style.display = 'none';
+    }
+  }
+
+  const displayedHexes = Array.from(hexList).filter(hex => hex.style.display !== 'none');
+  displayedHexes.sort((a, b) => originalOrder.indexOf(a) - originalOrder.indexOf(b));
+
+  const hexGrid = document.getElementById('hexGrid');
+  hexGrid.innerHTML = '';
+  displayedHexes.forEach(hex => {
+    hexGrid.appendChild(hex);
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Accordion
   const accordion = document.querySelector(".accordion");
