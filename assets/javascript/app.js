@@ -110,39 +110,48 @@ function toggleSkills(skillsToActivate) {
 
 
 
-  // Email validation
-  $(function () {
-    $("#contact-form").validate({
-      rules: {
-        from_name: {
-          required: true,
-          minlength: 4
+// Email validation
+    $(function () {
+      $("#contact-form").validate({
+        rules: {
+          from_name: {
+            required: true,
+            minlength: 4
+          },
+          reply_to: {
+            required: true,
+            email: true
+          },
+          message: {
+            required: true,
+            minlength: 10
+          }
         },
-        reply_to: {
-          required: true,
-          email: true
+        messages: {
+          from_name: {
+            required: "Please enter your name",
+            minlength: "Please enter at least 4 characters"
+          },
+          reply_to: {
+            required: "Please enter your email address",
+            email: "Please enter a valid email address"
+          },
+          message: {
+            required: "Please leave a message",
+            minlength: "Your message must be at least 10 characters long"
+          }
         },
-        message: {
-          required: true,
-          minlength: 10
+        onsubmit: false
+      });
+
+      // Run validation on form submit
+      $("#sendButton").on("click", function (e) {
+        e.preventDefault();
+        if ($("#contact-form").valid()) {
+          $("#contact-form").submit();
         }
-      },
-      messages: {
-        from_name: {
-          required: "Please enter your name",
-          minlength: "Please enter at least 4 characters"
-        },
-        reply_to: {
-          required: "Please enter your email address",
-          email: "Please enter a valid email address"
-        },
-        message: {
-          required: "Please leave a message",
-          minlength: "Your message must be at least 10 characters long"
-        }
-      }
+      });
     });
-  });
 
   // Event Listener for Scroll Animations
   // window.addEventListener('scroll', () => {
