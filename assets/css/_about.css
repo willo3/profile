@@ -54,10 +54,14 @@
 }
 
 
-@media (min-width: 511px) and (max-width: 590px) {
+@media (min-width: 539px) and (max-width: 590px) {
+  * > .about {
+    margin: 0!important;
+    padding-left: 2rem!important;
+}
   .about-content {
-    min-width: 42.5rem!important;
-    margin-right: 5rem;
+    width: 100%;
+    min-width: 42.5rem;
   }
   .about-content p {
     font-size: 1.75rem;
@@ -67,11 +71,15 @@
   }
 }
 
-@media (min-width: 460px) and (max-width: 510px) {
+@media (min-width: 511px) and (max-width: 538px) {
+  * > .about {
+    margin: 0!important;
+    padding-left: 1rem!important;
+}
   .about-content {
-    min-width: 35rem!important;
-    margin-right: 8rem;
-    margin-left: 0!important;
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 35rem;
   }
   .about-content p {
     font-size: 1.6rem;
@@ -81,30 +89,57 @@
   }
 }
 
-@media (min-width: 441px) and (max-width: 459px) {
+@media (min-width: 460px) and (max-width: 510px) {
+  * > .about {
+    margin: 0!important;
+    padding-left: 1rem!important;
+}
   .about-content {
-    min-width: 30rem!important;
-    margin-right: 8rem;
-    margin-left: 0!important;
+    width: 100%!important;
+    padding: 0 1rem;
+    min-width: 30rem;
   }
   .about-content p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
     margin: 20px 0 40px;
+    margin-right: 5rem;
     text-align: justify;
   }
 }
 
-@media (max-width: 440px) {
+@media (min-width: 451px) and (max-width: 459px) {
+  * > .about {
+    padding-left: 0!important;
+}
   .about-content {
-    min-width: 25rem!important;
-    margin-right: 8rem;
-    margin-left: 0!important;
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 30rem;
   }
   .about-content p {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 20px 0 40px;
     text-align: justify;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 5rem;
+    text-align: justify;
+    margin-right: 5rem;
   }
 }
