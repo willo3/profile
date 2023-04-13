@@ -150,3 +150,68 @@ a.hex-button.hex-border#cv-pdf {
   display: block;
 }
 
+@media (min-width: 980) and (max-width: 1116px) {
+  .contact-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    margin-top: 0!important;
+    padding-top: 0!important;
+  }
+
+  .contact-content h2 {
+display: none;
+  }
+
+  .contact-content h3,
+  .contact-content p {
+    padding-left: 0;
+  }
+
+  .contact-content a.hex-button.hex-border {
+    margin-left: 1.75rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: block;
+  }
+
+  .contact-content a.hex-button.hex-border#cv-pdf {
+    margin-left: 1.75rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+@media (max-width: 979px) {
+  .contact-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    margin-top: 0!important;
+    padding-top: 0!important;
+  }
+
+
+
+  .contact-content h3,
+  .contact-content p {
+    padding-left: 0;
+  }
+
+  .contact-content a.hex-button.hex-border {
+    margin-left: 1.75rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: block;
+  }
+
+  .contact-content a.hex-button.hex-border#cv-pdf {
+    margin-left: 1.75rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    display: block;
+  }
+}
