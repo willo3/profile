@@ -78,14 +78,14 @@ function toggleSkills(skillsToActivate) {
   }
 
   for (let i = startIndex; i < endIndex; i++) {
-    if (hexList[i].style.display === 'none') {
-      hexList[i].style.display = '';
+    if (hexList[i].style.opacity === '0') {
+      hexList[i].style.opacity = '1';
     } else {
-      hexList[i].style.display = 'none';
+      hexList[i].style.opacity = '0';
     }
   }
 
-  const displayedHexes = Array.from(hexList).filter(hex => hex.style.display !== 'none');
+  const displayedHexes = Array.from(hexList).filter(hex => hex.style.opacity !== '0');
   displayedHexes.sort((a, b) => originalOrder.indexOf(a) - originalOrder.indexOf(b));
 
   const hexGrid = document.getElementById('hexGrid');
@@ -94,7 +94,6 @@ function toggleSkills(skillsToActivate) {
     hexGrid.appendChild(hex);
   });
 }
-
 
 
 
