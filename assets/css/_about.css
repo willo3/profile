@@ -126,7 +126,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (min-width: 400px) and (max-width: 450px) {
   * > .about {
     padding-left: 0!important;
 }
@@ -141,5 +141,131 @@
     padding-right: 5rem;
     text-align: justify;
     margin-right: 5rem;
+  }
+}
+
+@media (min-width: 371px) and (max-width: 399px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 6rem;
+    text-align: justify;
+    margin-right: 6.5rem;
+  }
+}
+
+@media (min-width: 355px) and (max-width: 370px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 7rem;
+    text-align: justify;
+    margin-right: 7rem;
+  }
+}
+
+@media (min-width: 338px) and (max-width: 354px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 8rem;
+    text-align: justify;
+    margin-right: 8rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 337px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 9rem;
+    text-align: justify;
+    margin-right: 9rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 319px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 10rem;
+    text-align: justify;
+    margin-right: 10rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 299px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 11rem;
+    text-align: justify;
+    margin-right: 11rem;
+  }
+}
+
+@media (max-width: 279px) {
+  * > .about {
+    padding-left: 0!important;
+}
+  .about-content {
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 25rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 13rem;
+    text-align: justify;
+    margin-right: 13rem;
   }
 }
