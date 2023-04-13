@@ -52,3 +52,45 @@
   /* margin-left: 5rem;
   margin-right: 5rem; */
 }
+
+
+@media (min-width: 511px) and (max-width: 590px) {
+  .about-content {
+    min-width: 42.5rem!important;
+    margin-right: 5rem;
+  }
+  .about-content p {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin: 20px 0 40px;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 510px) {
+  .about-content {
+    min-width: 35rem!important;
+    margin-right: 8rem;
+    margin-left: 0!important;
+  }
+  .about-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 20px 0 40px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 459px) {
+  .about-content {
+    min-width: 30rem!important;
+    margin-right: 8rem;
+    margin-left: 0!important;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 20px 0 40px;
+    text-align: justify;
+  }
+}
