@@ -111,60 +111,61 @@ function toggleSkills(skillsToActivate) {
 
 
   // Email validation
-// app.js
-$(document).ready(function () {
-  // Initialize Tooltipster for input fields
-  $('#name, #email, #contact_number, textarea[name="message"]').tooltipster({
-    trigger: 'custom',
-    onlyOne: false,
-    position: 'right'
-  });
+    $(document).ready(function () {
+      // Set tooltip colours
+      
+      // Initialize Tooltipster for input fields
+      $('#name, #email, #contact_number, textarea[name="message"]').tooltipster({
+        trigger: 'custom',
+        onlyOne: false,
+        position: 'top'
+      });
 
-  $("#contact-form").validate({
-    rules: {
-      from_name: {
-        required: true,
-        minlength: 4
-      },
-      reply_to: {
-        required: true,
-        email: true
-      },
-      message: {
-        required: true,
-        minlength: 10
-      }
-    },
-    messages: {
-      from_name: {
-        required: "Please enter your name",
-        minlength: "Please enter at least 4 characters"
-      },
-      reply_to: {
-        required: "Please enter your email address",
-        email: "Please enter a valid email address"
-      },
-      message: {
-        required: "Please leave a message",
-        minlength: "Your message must be at least 10 characters long"
-      }
-    },
-    errorPlacement: function (error, element) {
-      // Show Tooltipster error tooltips
-      $(element).tooltipster('update', $(error).text());
-      $(element).tooltipster('show');
-    },
-    success: function (label, element) {
-      // Hide Tooltipster error tooltips
-      $(element).tooltipster('hide');
-    },
-    submitHandler: function (form) {
-      sendMail();
-      $('#successModal').modal('show'); // Show the success modal
-      return false; // Prevent the form from being submitted and refreshing the page
-    }
-  });
-});
+      $("#contact-form").validate({
+        rules: {
+          from_name: {
+            required: true,
+            minlength: 4
+          },
+          reply_to: {
+            required: true,
+            email: true
+          },
+          message: {
+            required: true,
+            minlength: 10
+          }
+        },
+        messages: {
+          from_name: {
+            required: "Please enter your name",
+            minlength: "Please enter at least 4 characters"
+          },
+          reply_to: {
+            required: "Please enter your email address",
+            email: "Please enter a valid email address"
+          },
+          message: {
+            required: "Please leave a message",
+            minlength: "Your message must be at least 10 characters long"
+          }
+        },
+        errorPlacement: function (error, element) {
+          // Show Tooltipster error tooltips
+          $(element).tooltipster('update', $(error).text());
+          $(element).tooltipster('show');
+        },
+        success: function (label, element) {
+          // Hide Tooltipster error tooltips
+          $(element).tooltipster('hide');
+        },
+        submitHandler: function (form) {
+          sendMail();
+          $('#successModal').modal('show'); // Show the success modal
+          return false; // Prevent the form from being submitted and refreshing the page
+        }
+      });
+    });
 
   // Event Listener for Scroll Animations
   // window.addEventListener('scroll', () => {
