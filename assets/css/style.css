@@ -18,6 +18,7 @@
 @import "./_skills.css";
 @import "./_spacer.css";
 @import "./_text-type-animation.css";
+@import "../../node_modules/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css";
 
 * {
   box-sizing: border-box;

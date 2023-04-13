@@ -112,8 +112,6 @@ function toggleSkills(skillsToActivate) {
 
   // Email validation
     $(document).ready(function () {
-      // Set tooltip colours
-      
       // Initialize Tooltipster for input fields
       $('#name, #email, #contact_number, textarea[name="message"]').tooltipster({
         trigger: 'custom',
