@@ -32,3 +32,9 @@
 .hexLink {
   cursor: pointer;
 }
+
+@media (max-width: 992px) {
+  #hex-grid .light {
+    display: none;
+  }
+}
