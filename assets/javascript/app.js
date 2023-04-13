@@ -111,43 +111,48 @@ function toggleSkills(skillsToActivate) {
 
 
 // Email validation
-    $(function () {
-      $("#contact-form").validate({
-        rules: {
-          from_name: {
-            required: true,
-            minlength: 4
-          },
-          reply_to: {
-            required: true,
-            email: true
-          },
-          message: {
-            required: true,
-            minlength: 10
-          }
-        },
-        messages: {
-          from_name: {
-            required: "Please enter your name",
-            minlength: "Please enter at least 4 characters"
-          },
-          reply_to: {
-            required: "Please enter your email address",
-            email: "Please enter a valid email address"
-          },
-          message: {
-            required: "Please leave a message",
-            minlength: "Your message must be at least 10 characters long"
-          }
-        },
-        onsubmit: false
-      });
+    function validateForm() {
+      let isValid = true;
 
+      // Name validation
+      let name = $("#name");
+      let nameVal = name.val().trim();
+      if (nameVal.length < 4) {
+        name.next(".validate").text("Please enter at least 4 characters");
+        isValid = false;
+      } else {
+        name.next(".validate").text("");
+      }
+
+      // Email validation
+      let email = $("#email");
+      let emailVal = email.val().trim();
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailVal)) {
+        email.next(".validate").text("Please enter a valid email");
+        isValid = false;
+      } else {
+        email.next(".validate").text("");
+      }
+
+      // Message validation
+      let message = $("textarea[name='message']");
+      let messageVal = message.val().trim();
+      if (messageVal.length < 10) {
+        message.next(".validate").text("Please leave a message with at least 10 characters");
+        isValid = false;
+      } else {
+        message.next(".validate").text("");
+      }
+
+      return isValid;
+    }
+
+    $(function () {
       // Run validation on form submit
       $("#sendButton").on("click", function (e) {
         e.preventDefault();
-        if ($("#contact-form").valid()) {
+        if (validateForm()) {
           $("#contact-form").submit();
         }
       });
