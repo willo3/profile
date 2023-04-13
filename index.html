@@ -13,6 +13,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js"></script>
     <!-- email initiate function-->
     <script>
       (function() {
@@ -520,42 +522,42 @@
       </section>
 
 
- <!-- Contact Section -->
- <section class="contact" id="contact">
-  <div class="contact-wrapper">
-    <form role="form" class="php-email-form" id="contact-form">
-      <h2>Contact Me</h2>
-      <div class="contact-form-box1">
-        <input type="text" placeholder="Name" name="from_name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" data-error="" />
-        <div class="validate"></div>
-        <input type="email" placeholder="Email" name="reply_to" class="form-control" id="email" data-rule="email" data-msg="Please enter a valid email" data-error="" />
-        <div class="validate"></div>
-      </div>
-
-      <div class="contact-form-box2">
-        <input id="phone" type="number" class="form-control" placeholder="Phone Number (optional)" name="contact_number" id="contact_number" />
-      </div>
-      <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-control" data-rule="required" data-msg="Please leave a message" data-error=""></textarea>
-      <div class="validate"></div>
-      <div><button class="hex-button hex-border" id="sendButton" value="Send" type="submit">Send</button></div>
-      <!-- <input type="submit" id="sendButton" onclick="sendMail()" value="Send" class="hex-button hex-border"> -->
-      <div id="successModal" class="modal">
-        <div class="modal-box">
-          <div class="modal-header">
-            <h2>Your message has been sent</h2>
-            <div class="btn_close">X</div>
-          </div>
-          <div class="modal-content">
-            <p>
-              A confirmation email has been sent
-            </p>
-            <p>
-              I'll get back to you as soon as I can
-            </p>
-          </div>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-wrapper">
+      <form role="form" class="php-email-form" id="contact-form">
+        <h2>Contact Me</h2>
+        <div class="contact-form-box1">
+          <input type="text" placeholder="Name" name="from_name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" data-error="" />
+          <div class="validate"></div>
+          <input type="email" placeholder="Email" name="reply_to" class="form-control" id="email" data-rule="email" data-msg="Please enter a valid email" data-error="" />
+          <div class="validate"></div>
         </div>
+
+        <div class="contact-form-box2">
+          <input  type="number" class="form-control" placeholder="Phone Number (optional)" name="contact_number" id="contact_number" />
+        </div>
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-control" data-rule="required" data-msg="Please leave a message" data-error=""></textarea>
+        <div class="validate"></div>
+        <div><button class="hex-button hex-border" id="sendButton" value="Send" type="submit">Send</button></div>
+        <!-- <input type="submit" id="sendButton" onclick="sendMail()" value="Send" class="hex-button hex-border"> -->
+        <div id="successModal" class="modal">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h2>Your message has been sent</h2>
+              <div class="btn_close">X</div>
+            </div>
+            <div class="modal-content">
+              <p>
+                A confirmation email has been sent
+              </p>
+              <p>
+                I'll get back to you as soon as I can
+              </p>
+            </div>
+          </div>
+      </form>
     </div>
-    </form>
     <div class="contact-content">
       <h2 class="heading"><span></span></h2>
       <h2>Details</h2>

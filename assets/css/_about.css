@@ -81,9 +81,23 @@
   }
 }
 
-@media (max-width: 459px) {
+@media (min-width: 441px) and (max-width: 459px) {
   .about-content {
     min-width: 30rem!important;
+    margin-right: 8rem;
+    margin-left: 0!important;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 20px 0 40px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 440px) {
+  .about-content {
+    min-width: 25rem!important;
     margin-right: 8rem;
     margin-left: 0!important;
   }

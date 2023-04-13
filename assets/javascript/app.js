@@ -111,52 +111,60 @@ function toggleSkills(skillsToActivate) {
 
 
   // Email validation
-    function validateForm() {
-      let isValid = true;
+// app.js
+$(document).ready(function () {
+  // Initialize Tooltipster for input fields
+  $('#name, #email, #contact_number, textarea[name="message"]').tooltipster({
+    trigger: 'custom',
+    onlyOne: false,
+    position: 'right'
+  });
 
-      // Name validation
-      let name = $("#name");
-      let nameVal = name.val().trim();
-      if (nameVal.length < 4) {
-        name.attr("data-error", "Please enter at least 4 characters");
-        isValid = false;
-      } else {
-        name.attr("data-error", "");
+  $("#contact-form").validate({
+    rules: {
+      from_name: {
+        required: true,
+        minlength: 4
+      },
+      reply_to: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true,
+        minlength: 10
       }
-
-      // Email validation
-      let email = $("#email");
-      let emailVal = email.val().trim();
-      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailVal)) {
-        email.attr("data-error", "Please enter a valid email");
-        isValid = false;
-      } else {
-        email.attr("data-error", "");
+    },
+    messages: {
+      from_name: {
+        required: "Please enter your name",
+        minlength: "Please enter at least 4 characters"
+      },
+      reply_to: {
+        required: "Please enter your email address",
+        email: "Please enter a valid email address"
+      },
+      message: {
+        required: "Please leave a message",
+        minlength: "Your message must be at least 10 characters long"
       }
-
-      // Message validation
-      let message = $("textarea[name='message']");
-      let messageVal = message.val().trim();
-      if (messageVal.length < 10) {
-        message.attr("data-error", "Please leave a message with at least 10 characters");
-        isValid = false;
-      } else {
-        message.attr("data-error", "");
-      }
-
-      return isValid;
+    },
+    errorPlacement: function (error, element) {
+      // Show Tooltipster error tooltips
+      $(element).tooltipster('update', $(error).text());
+      $(element).tooltipster('show');
+    },
+    success: function (label, element) {
+      // Hide Tooltipster error tooltips
+      $(element).tooltipster('hide');
+    },
+    submitHandler: function (form) {
+      sendMail();
+      $('#successModal').modal('show'); // Show the success modal
+      return false; // Prevent the form from being submitted and refreshing the page
     }
-
-    $(function () {
-      // Run validation on form submit
-      $("#sendButton").on("click", function (e) {
-        e.preventDefault();
-        if (validateForm()) {
-          $("#contact-form").submit();
-        }
-      });
-    });
+  });
+});
 
   // Event Listener for Scroll Animations
   // window.addEventListener('scroll', () => {
