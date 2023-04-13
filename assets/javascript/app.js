@@ -45,8 +45,14 @@ console.log(skillMenu);
 skillMenu.addEventListener('click', (e) => {
   const activeSkills = e.target.closest("li");
   console.log(activeSkills);
-  
+  if (!activeSkills) return;
+  toggleSkills(activeSkills);
 });
+
+function toggleSkills(skillsToActivate) {
+  const frontEndSkills = skillsToActivate.parentElement.querySelectorAll(".hex #frontEnd");
+  console.log(frontEndSkills);
+};
 
   // Accordion
   const accordion = document.querySelector(".accordion");
