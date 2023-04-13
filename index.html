@@ -312,23 +312,21 @@
 
 
     <!-- About Section -->
-      <section class="about" id="about">
-        <div class="about-picture">
-          <div class="picture" >
-            <img src="./assets/images/Profile-picture.png" alt="Profile picture">
-          </div>
+    <section class="about" id="about">
+      <div class="about-picture">
+        <div class="picture" >
+          <img src="./assets/images/Profile-picture.png" alt="Profile picture">
         </div>
-        <div class="about-content">
-          <h2 class="heading"><span></span></h2>
-          <h3>About Me</h3>
-          <p>Hey there! I'm a passionate software enthusiast who's always had a love for tech, science, and innovation. My journey in coding truly took off when I attended an intense, 9-week bootcamp that not only consolidated my knowledge, but also ignited a deeper passion for the craft.</p>
-          <p>When I'm working on apps, I often find myself in the zone, completely immersed in the world of code, losing track of time as I enter a flow state. I thoroughly enjoy exploring new ideas and translating them into digital reality.</p>
-          <p>Outside the realm of programming, I'm a dog lover and an avid fan of both pen and paper and computer role-playing games. When I'm not coding or gaming, you can find me in the kitchen cooking up a storm or diving into the pages of a great book.</p>
-          <p>In a nutshell, I'm a curious and dedicated individual who thrives on challenges and enjoys exploring diverse interests. Feel free to explore my website to learn more about my work and the projects I've been involved in!</p>
-        </div>
-
-
-      </section>
+      </div>
+      <div class="about-content">
+        <h2 class="heading"><span></span></h2>
+        <h3>About Me</h3>
+        <p>Hey there! I'm a passionate software enthusiast who's always had a love for tech, science, and innovation. My journey in coding truly took off when I attended an intense, 9-week bootcamp that not only consolidated my knowledge, but also ignited a deeper passion for the craft.</p>
+        <p>When I'm working on apps, I often find myself in the zone, completely immersed in the world of code, losing track of time as I enter a flow state. I thoroughly enjoy exploring new ideas and translating them into digital reality.</p>
+        <p>Outside the realm of programming, I'm a dog lover and an avid fan of both pen and paper and computer role-playing games. When I'm not coding or gaming, you can find me in the kitchen cooking up a storm or diving into the pages of a great book.</p>
+        <p>In a nutshell, I'm a curious and dedicated individual who thrives on challenges and enjoys exploring diverse interests. Feel free to explore my website to learn more about my work and the projects I've been involved in!</p>
+      </div>
+    </section>
 
       <!-- Portfolio Section -->
       <section class="portfolio" id="portfolio">
@@ -528,15 +526,16 @@
     <form role="form" class="php-email-form" id="contact-form">
       <h2>Contact Me</h2>
       <div class="contact-form-box1">
-        <input type="text" placeholder="Name" name="from_name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
+        <input type="text" placeholder="Name" name="from_name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" data-error="" />
         <div class="validate"></div>
-        <input type="email" placeholder="Email" name="reply_to" class="form-control" id="email" data-rule="email" data-msg="Please enter a valid email" />
+        <input type="email" placeholder="Email" name="reply_to" class="form-control" id="email" data-rule="email" data-msg="Please enter a valid email" data-error="" />
         <div class="validate"></div>
       </div>
+
       <div class="contact-form-box2">
         <input id="phone" type="number" class="form-control" placeholder="Phone Number (optional)" name="contact_number" id="contact_number" />
       </div>
-      <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-control" data-rule="required" data-msg="Please leave a message"></textarea>
+      <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-control" data-rule="required" data-msg="Please leave a message" data-error=""></textarea>
       <div class="validate"></div>
       <div><button class="hex-button hex-border" id="sendButton" value="Send" type="submit">Send</button></div>
       <!-- <input type="submit" id="sendButton" onclick="sendMail()" value="Send" class="hex-button hex-border"> -->

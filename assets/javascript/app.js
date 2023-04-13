@@ -110,7 +110,7 @@ function toggleSkills(skillsToActivate) {
 
 
 
-// Email validation
+  // Email validation
     function validateForm() {
       let isValid = true;
 
@@ -118,10 +118,10 @@ function toggleSkills(skillsToActivate) {
       let name = $("#name");
       let nameVal = name.val().trim();
       if (nameVal.length < 4) {
-        name.next(".validate").text("Please enter at least 4 characters");
+        name.attr("data-error", "Please enter at least 4 characters");
         isValid = false;
       } else {
-        name.next(".validate").text("");
+        name.attr("data-error", "");
       }
 
       // Email validation
@@ -129,20 +129,20 @@ function toggleSkills(skillsToActivate) {
       let emailVal = email.val().trim();
       let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(emailVal)) {
-        email.next(".validate").text("Please enter a valid email");
+        email.attr("data-error", "Please enter a valid email");
         isValid = false;
       } else {
-        email.next(".validate").text("");
+        email.attr("data-error", "");
       }
 
       // Message validation
       let message = $("textarea[name='message']");
       let messageVal = message.val().trim();
       if (messageVal.length < 10) {
-        message.next(".validate").text("Please leave a message with at least 10 characters");
+        message.attr("data-error", "Please leave a message with at least 10 characters");
         isValid = false;
       } else {
-        message.next(".validate").text("");
+        message.attr("data-error", "");
       }
 
       return isValid;

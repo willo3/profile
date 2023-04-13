@@ -1,4 +1,10 @@
 /* Responsiveness */
+@media (max-width: 1299px) {
+  .about {
+    flex-direction: column-reverse!important;
+  }
+}
+
 /* Navbar */
 @media (min-width: 610px) and (max-width: 992px) {
   .navbar .links {
@@ -22,9 +28,9 @@
 }
 
 @media (min-width: 610px) and (max-width: 991px) {
-  .picture img {
+  /* .picture img {
     display: none;
-  }
+  } */
 
   .navbar .links {
     display: none;
@@ -47,11 +53,11 @@
     flex-wrap: wrap;
   } */
 
-  .picture img {
+  /* .picture img {
     width: 80%;
     margin-left: 15vh;
     margin-right: 5vh;
-  }
+  } */
 }
 
 
@@ -107,9 +113,9 @@
     max-width:50px;
   }
 
-  .picture img {
+  /* .picture img {
     display: none;
-  }
+  } */
 }
 
 
@@ -313,10 +319,10 @@
 
 /* Pictures */
 
-@media (min-width: 991px) and (max-width: 1085px) {
+/* @media (min-width: 991px) and (max-width: 1085px) {
   .picture img {
   width: 30vh;
   margin-left: 7vh;
   margin-right: 7vh;
   }
-}
+} */
