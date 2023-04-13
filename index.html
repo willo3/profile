@@ -12,6 +12,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <!-- email initiate function-->
     <script>
       (function() {
@@ -537,7 +538,7 @@
       </div>
       <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-control" data-rule="required" data-msg="Please leave a message"></textarea>
       <div class="validate"></div>
-      <div><button class="hex-button hex-border" id="sendButton" onclick="sendMail()" value="Send" type="submit">Send</button></div>
+      <div><button class="hex-button hex-border" id="sendButton" value="Send" type="submit">Send</button></div>
       <!-- <input type="submit" id="sendButton" onclick="sendMail()" value="Send" class="hex-button hex-border"> -->
       <div id="successModal" class="modal">
         <div class="modal-box">
@@ -583,25 +584,26 @@
     <script>
       (function() {
         function sendMail() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                emailjs.sendForm('service_3a3y7xf', 'template_ci7p1oh', '#contact-form')
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        let contactForm = document.getElementById("contact-form");
-                        contactForm.reset();
-                        showSuccessModal();
-                        // setInterval(() => window.location.reload(true), 3000)
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
+          let contactForm = $("#contact-form");
+          if (contactForm.valid()) {
+            emailjs.sendForm('service_3a3y7xf', 'template_ci7p1oh', '#contact-form')
+              .then(function() {
+                console.log('SUCCESS!');
+                contactForm[0].reset();
+                showSuccessModal();
+              }, function(error) {
+                console.log('FAILED...', error);
+              });
+          } else {
+            console.log('Validation failed. Not sending email.');
+          }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-  // Call the sendMail function after the DOM content is loaded
-  sendMail();
-});
+        $("#contact-form").on('submit', function(event) {
+          event.preventDefault();
+          sendMail();
+        });
+
 
         function showSuccessModal() {
           let modal = $("#successModal");

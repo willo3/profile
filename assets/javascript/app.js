@@ -110,8 +110,39 @@ function toggleSkills(skillsToActivate) {
 
 
 
-  // Email Functionality
-
+  // Email validation
+  $(function () {
+    $("#contact-form").validate({
+      rules: {
+        from_name: {
+          required: true,
+          minlength: 4
+        },
+        reply_to: {
+          required: true,
+          email: true
+        },
+        message: {
+          required: true,
+          minlength: 10
+        }
+      },
+      messages: {
+        from_name: {
+          required: "Please enter your name",
+          minlength: "Please enter at least 4 characters"
+        },
+        reply_to: {
+          required: "Please enter your email address",
+          email: "Please enter a valid email address"
+        },
+        message: {
+          required: "Please leave a message",
+          minlength: "Your message must be at least 10 characters long"
+        }
+      }
+    });
+  });
 
   // Event Listener for Scroll Animations
   // window.addEventListener('scroll', () => {

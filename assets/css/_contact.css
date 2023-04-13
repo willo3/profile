@@ -142,3 +142,10 @@ a.hex-button.hex-border#cv-pdf {
 #sendButton {
   margin-left: 2rem;
 }
+
+.modal {
+  display: none;
+}
+.modal.show {
+  display: block;
+}
