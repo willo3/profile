@@ -1,3 +1,5 @@
+
+
 .portfolio {
 margin-top: 10rem;
 }
@@ -8,9 +10,10 @@ margin-top: 10rem;
 }
 .portfolio .wrapper {
   z-index: 200;
-  max-width: 120rem;
+  max-width: 150rem;
   margin-inline: auto;
   padding: 1rem;
+
 }
 
 .accordion {
@@ -19,7 +22,7 @@ margin-top: 10rem;
   --_panel-gap: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 0rem;
   background: transparent;
   margin-top: 10rem;
 }
