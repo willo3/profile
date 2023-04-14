@@ -312,3 +312,10 @@ transition: 0.8s;
     display: none;
   }
 }
+
+.active {
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: none;
+}

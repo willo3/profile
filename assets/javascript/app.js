@@ -77,6 +77,20 @@ function toggleSkills(skillsToActivate) {
     endIndex = 16;
   }
 
+  let allActive = true;
+  for (let i = startIndex; i < endIndex; i++) {
+    if (hexList[i].style.opacity === '0') {
+      allActive = false;
+      break;
+    }
+  }
+
+  if (allActive) {
+    skillsToActivate.classList.remove('active');
+  } else {
+    skillsToActivate.classList.add('active');
+  }
+
   for (let i = startIndex; i < endIndex; i++) {
     if (hexList[i].style.opacity === '0') {
       hexList[i].style.opacity = '1';
@@ -94,6 +108,8 @@ function toggleSkills(skillsToActivate) {
     hexGrid.appendChild(hex);
   });
 }
+
+
 
 
 
