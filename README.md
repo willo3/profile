@@ -8,4 +8,4 @@ Made using HTML, CSS, JS (using Jquery 3.6.4), and Yarn
 
 ## Known Issues
 
-This is a WIP, so far no issues
+This is a WIP
