@@ -28,23 +28,9 @@
   activeSection.addEventListener('click', toggleActiveSection);
   window.onscroll = toggleActiveSection;
 
-
   document.addEventListener('DOMContentLoaded', toggleActiveSection);
   activeSection.addEventListener('click', toggleActiveSection);
   window.onscroll = toggleActiveSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Skills menu
 const hexList = document.querySelectorAll('.hex');
@@ -126,37 +112,6 @@ const certificatesOption = toggleList[3];
 toggleSkills(certificatesOption);
 toggleSkills(certificatesOption);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // Accordion
   const accordion = document.querySelector(".accordion");
 
@@ -187,31 +142,6 @@ toggleSkills(certificatesOption);
     });
     panelToActivate.querySelector(".panel-title").setAttribute("aria-hidden", false);
   };
-
-
-
-
-  // // Find the input button and create a new anchor element
-  // var inputButton = document.querySelector('input[type="submit"]');
-  // var anchorElement = document.createElement('a');
-
-  // // Copy the button text and classes to the anchor element
-  // anchorElement.innerHTML = inputButton.value;
-  // anchorElement.className = inputButton.className;
-
-  // // Copy any relevant attributes to the anchor element
-  // var attributes = inputButton.attributes;
-  // for (var i = 0; i < attributes.length; i++) {
-  //   var attr = attributes[i];
-  //   if (attr.name !== 'type' && attr.name !== 'value' && attr.name !== 'class') {
-  //     anchorElement.setAttribute(attr.name, attr.value);
-  //   }
-  // }
-
-  // // Replace the input button with the anchor element
-  // inputButton.parentNode.replaceChild(anchorElement, inputButton);
-
-
 
   // Email validation
     $(document).ready(function () {
@@ -268,12 +198,6 @@ toggleSkills(certificatesOption);
       });
     });
 
-  // Event Listener for Scroll Animations
-  // window.addEventListener('scroll', () => {
-  //   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-  // }, false);
-
-
   // Glowing light
     const light = document.querySelector('.light');
     // Makes light glow follow mouse pointer
@@ -281,7 +205,6 @@ toggleSkills(certificatesOption);
       light.style.left = `${e.clientX}px`;
       light.style.top = `${e.clientY}px`;
     });
-
 
   jQuery(function(){ //Add class to parent element to margin properly
     jQuery(".hb-lg").parent().addClass("hb-lg-margin");
@@ -317,8 +240,6 @@ toggleSkills(certificatesOption);
       ? 'fa fa-caret-up'
       : 'fa fa-bars';
   });
-
-
 
   // Electric Current Effect
   chars = ["⬤"];
@@ -389,3 +310,47 @@ toggleSkills(certificatesOption);
 
   });
 })();
+
+
+//Hexgrid modals
+function createAndShowSkillModal(event, title, description) {
+  const modal = document.createElement("div");
+  modal.classList.add("skill-modal");
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("skill-modal-content");
+
+  const closeButton = document.createElement("span");
+  closeButton.classList.add("close");
+  closeButton.innerHTML = "&times;";
+  closeButton.onclick = () => modal.style.display = "none";
+
+  const modalTitle = document.createElement("h2");
+  modalTitle.innerText = title;
+
+  const modalDescription = document.createElement("p");
+  modalDescription.innerText = description;
+
+  modalContent.appendChild(closeButton);
+  modalContent.appendChild(modalTitle);
+  modalContent.appendChild(modalDescription);
+  modal.appendChild(modalContent);
+
+  document.body.appendChild(modal);
+
+  // Show the modal
+  modal.style.display = "block";
+}
+
+const hexes = document.querySelectorAll(".hex");
+
+hexes.forEach((hex, index) => {
+  hex.addEventListener("click", (event) => {
+    const title = hex.querySelector("h1");
+    const description = hex.querySelector("p");
+
+    if (title && description) {
+      createAndShowSkillModal(event, title.innerText, description.innerText);
+    }
+  });
+});
