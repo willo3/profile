@@ -268,6 +268,11 @@ transition: 0.8s;
   color: var(--text);
   font-size: 5rem!important;
 }
+.right-side li:hover {
+  cursor: pointer;
+}
+
+
 /* Responsive layout */
 @media (max-width: 992px) {
   .left-side,
