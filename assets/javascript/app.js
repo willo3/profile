@@ -53,6 +53,18 @@ const skillMenu = document.querySelector(".right-side");
 
 const originalOrder = Array.from(hexList);
 
+// Set initial state
+hexList.forEach((hex, index) => {
+  if (index !== 15) {
+    hex.style.opacity = '0';
+  }
+});
+toggleList.forEach((toggle, index) => {
+  if (index !== 3) {
+    toggle.classList.remove('active');
+  }
+});
+
 skillMenu.addEventListener('click', (e) => {
   const activeSkills = e.target.closest("li");
   if (!activeSkills) return;
@@ -108,6 +120,7 @@ function toggleSkills(skillsToActivate) {
     hexGrid.appendChild(hex);
   });
 }
+
 
 
 
