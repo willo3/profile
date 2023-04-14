@@ -121,6 +121,12 @@ function toggleSkills(skillsToActivate) {
   });
 }
 
+// Simulate clicking the certificates option twice on page load
+const certificatesOption = toggleList[3];
+toggleSkills(certificatesOption);
+toggleSkills(certificatesOption);
+
+
 
 
 
