@@ -246,6 +246,7 @@ transition: 0.8s;
 }
 
 .right-side {
+  padding-top: 30rem;
   flex: 1;
   /* margin-left: 1rem; */
   background: transparent;
