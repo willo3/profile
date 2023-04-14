@@ -13,4 +13,7 @@ jQuery(function(){ //Hover color as icon
 	//Github
 	jQuery( ".hb .fa-github,.hb .fa-github-square, .hb .fa-github-alt").parent().addClass("hb-github");
 	jQuery( ".hb.inv .fa-github,.hb.inv .fa-github-square, .hb.inv .fa-github-alt").parent().addClass("hb-github-inv").removeClass("hb-github");
+	//Codepen
+	jQuery( ".hb .fa-codepen").parent().addClass("hb-codepen");
+	jQuery( ".hb.inv .fa-codepen").parent().addClass("hb-codepen-inv").removeClass("hb-codepen");
 });
