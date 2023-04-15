@@ -92,8 +92,6 @@ skillMenuMobile.addEventListener('click', (e) => {
 });
 
 
-
-
 function toggleSkills(skillsToActivate, forceActivate = false, menuOrigin = null) {
   const skillsText = skillsToActivate.textContent.trim().toLowerCase();
   let startIndex, endIndex;
