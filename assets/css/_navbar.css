@@ -57,6 +57,7 @@ li {
     font-family: 'Press Start 2P', cursive;
     font-size: 5rem;
     font-weight: 100!important;
+  
   }
 }
 
@@ -159,7 +160,7 @@ li {
   cursor: pointer;
   font-size: 4rem;
   color: var(--text);
-  padding-right: 6rem;
+  padding-right: 4rem;
 }
 
 /* Dropdown Mobile Menu */
