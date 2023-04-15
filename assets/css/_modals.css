@@ -98,11 +98,18 @@
     }
 
     .skill-modal-content h2 {
-      font-size: 2em;
+      font-size: 2.5em;
+      font-weight: 800;
     }
 
     .skill-modal-content p {
       font-size: 1.6em;
+    }
+
+    .modal-link {
+      font-size: 2em;
+      color: var(--secondary);
+      font-weight: 700;
     }
 
     .close {

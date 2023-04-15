@@ -336,16 +336,17 @@ function createAndShowSkillModal(title, description, link, linkText) {
 
   if (link) {
     const modalLink = document.createElement("a");
-    modalLink.href = link;
-    modalLink.innerText = linkText || "Click here for more information";
+    modalLink.href = link || "#";
+    modalLink.innerText = link ? (linkText || "Click here for more information") : "";
+    modalLink.classList.add("modal-link");
     modalLink.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent the event from bubbling up
+      e.stopPropagation(); // Prevent bubbling up
     });
 
-    modalContent.appendChild(modalLink); // Add the link to the modal content
+    modalContent.appendChild(modalLink);
   }
 
-  // Close the modal when clicking on the modal itself
+  // Close the modal when clicking anywhere
   modal.addEventListener("click", () => {
     modal.style.display = "none";
   });
@@ -365,4 +366,3 @@ hexes.forEach((hex, index) => {
     }
   });
 });
-
