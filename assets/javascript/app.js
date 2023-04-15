@@ -320,48 +320,51 @@ toggleSkills(certificatesOption);
   /* ----- Settings END ----- */
 
   // Create a String with random Chars
-  function matrixString(){
-    ranTime = Math.floor(Math.random() * maxStringDelay + minStringDelay);
-    ranLen = Math.floor(Math.random() * maxStringLength + minStringLength);
-    leftPos = Math.floor(Math.random() * $("#text-output").width() + 0);
+// Create a String with random Chars
+function matrixString() {
+  ranTime = Math.floor(Math.random() * maxStringDelay + minStringDelay);
+  ranLen = Math.floor(Math.random() * maxStringLength + minStringLength);
+  leftPos = Math.floor(Math.random() * $("#text-output").width() + 0);
 
-    singleStream = [];
-    for(j=0; j<ranLen;j++){
-      ranChar = Math.floor(Math.random() * chars.length + 0);
-      singleStream[j] = chars[ranChar];
-    }
+  singleStream = [];
+  for (j = 0; j < ranLen; j++) {
+    ranChar = Math.floor(Math.random() * chars.length + 0);
+    singleStream[j] = chars[ranChar];
+  }
 
-    // 2 different Nodes for the Colors
-    if($(".matrixString").length % 2 == 0){
-      $("#text-output").append("<div style='color:" + textCol1 + "; text-shadow: 0px 0px 15px " + textCol1 + ", 0px 0px 10px " + textCol1 + ", 0px 0px 5px " + textCol1 + "; top:-500px; left:" + leftPos + "px' class='matrixString ms-col1'>" + singleStream.join("") + "</div>");
-    } else {
-      $("#text-output").append("<div style='color:" + textCol2 + "; text-shadow: 0px 0px 15px " + textCol2 + ", 0px 0px 10px " + textCol2 + ", 0px 0px 5px " + textCol2 + "; top:-500px; left:" + leftPos + "px' class='matrixString ms-col2'>" + singleStream.join("") + "</div>");
-    }
+  // 2 different Nodes for the Colors
+  if ($(".matrixString").length % 2 == 0) {
+    $("#text-output").append("<div style='color:" + textCol1 + "; text-shadow: 0px 0px 15px " + textCol1 + ", 0px 0px 10px " + textCol1 + ", 0px 0px 5px " + textCol1 + "; top:-500px; left:" + leftPos + "px' class='matrixString ms-col1'>" + singleStream.join("") + "</div>");
+  } else {
+    $("#text-output").append("<div style='color:" + textCol2 + "; text-shadow: 0px 0px 15px " + textCol2 + ", 0px 0px 10px " + textCol2 + ", 0px 0px 5px " + textCol2 + "; top:-500px; left:" + leftPos + "px' class='matrixString ms-col2'>" + singleStream.join("") + "</div>");
+  }
 
   // Remove the finished Strings
-  $('.matrixString').each(function(i, obj) {
-    if($(this).offset().top > ($(document).height() - $(window).height())){
+  $(".matrixString").each(function(i, obj) {
+    if ($(this).offset().top > ($(document).height() - $(window).height())) {
       $(this).remove();
     }
   });
 
-    // Recursive Function Call with a randomized Delay
-    setTimeout(function() {
-      i++;
-      // Make sure there are not too many Nodes
-      if ($(".matrixString").length < 200) {
-        matrixString();
-      } else {
-        $(".matrixString:lt(2)").remove();
-        matrixString();
-      }
-    }, ranTime);
+  // Recursive Function Call with a randomized Delay
+  setTimeout(function() {
+    i++;
+    // Make sure there are not too many Nodes
+    if ($(".matrixString").length < 200) {
+      matrixString();
+    } else {
+      $(".matrixString:lt(2)").remove();
+      matrixString();
+    }
+  }, ranTime);
 
-    // Animate the Strings
-    minStringSpeed2 = minStringSpeed * 10000; maxStringSpeed2 = maxStringSpeed * 10000;
-    ranSpeed = Math.floor(Math.random() * maxStringSpeed2 + minStringSpeed2);
-    $(".matrixString").animate({ "top": "1500px" }, ranSpeed );
-  }
+  // Animate the Strings
+  minStringSpeed2 = minStringSpeed * 10000;
+  maxStringSpeed2 = maxStringSpeed * 10000;
+  ranSpeed = Math.floor(Math.random() * maxStringSpeed2 + minStringSpeed2);
+  $(".matrixString").animate({ "top": "1500px" }, ranSpeed);
+}
+
   matrixString();
 
   });
