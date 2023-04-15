@@ -328,3 +328,9 @@ transition: 0.8s;
   -webkit-background-clip: text;
   background-clip: none;
 }
+.skills-menu-mobile .active {
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: none;
+}

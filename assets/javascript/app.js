@@ -62,17 +62,26 @@ skillMenuMobile.addEventListener('click', (e) => {
   const activeSkills = e.target.closest("li");
   if (!activeSkills) return;
 
+  // Remove the 'active' class from all the <li> elements
+  skillMenuMobile.querySelectorAll('li').forEach(li => {
+    li.classList.remove('active');
+  });
+
+  // Add the 'active' class to the clicked <li> element
+  activeSkills.classList.add('active');
+
   // First, collapse all other groups in the .skills-menu-mobile
   let mobileMenuItems = skillMenuMobile.querySelectorAll('.menu-item-has-children');
   mobileMenuItems.forEach(function (item) {
-      if (item !== activeSkills) {
-          item.classList.remove('open');
-      }
+    if (item !== activeSkills) {
+      item.classList.remove('open');
+    }
   });
 
   // Then, toggle the current group
   toggleSkills(activeSkills, false, 'mobile');
 });
+
 
 
 
