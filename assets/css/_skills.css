@@ -242,7 +242,8 @@ transition: 0.8s;
   /* margin-right: 1rem; */
   background: transparent;
   height: 90vh; /* Fixed height relative to viewport height */
-  overflow-y: auto; /* Enable scrolling for overflowing content */
+  overflow: visible; /* Enable scrolling for overflowing content */
+
 }
 
 .right-side {
