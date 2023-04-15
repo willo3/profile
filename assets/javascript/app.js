@@ -41,7 +41,7 @@ const originalOrder = Array.from(hexList);
 
 // Set initial state
 hexList.forEach((hex, index) => {
-  if (index !== 15) {
+  if (index !== 15 && index !== 16) {
     hex.style.opacity = '0';
   }
 });
@@ -72,7 +72,7 @@ function toggleSkills(skillsToActivate) {
     endIndex = 15;
   } else if (skillsText === 'certificates') {
     startIndex = 15;
-    endIndex = 16;
+    endIndex = 17;
   }
 
   let allActive = true;
