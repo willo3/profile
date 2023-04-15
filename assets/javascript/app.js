@@ -313,17 +313,12 @@ toggleSkills(certificatesOption);
 
 
 //Hexgrid modals
-function createAndShowSkillModal(event, title, description) {
+function createAndShowSkillModal(title, description, link, linkText) {
   const modal = document.createElement("div");
   modal.classList.add("skill-modal");
 
   const modalContent = document.createElement("div");
   modalContent.classList.add("skill-modal-content");
-
-  const closeButton = document.createElement("span");
-  closeButton.classList.add("close");
-  closeButton.innerHTML = "&times;";
-  closeButton.onclick = () => modal.style.display = "none";
 
   const modalTitle = document.createElement("h2");
   modalTitle.innerText = title;
@@ -331,26 +326,43 @@ function createAndShowSkillModal(event, title, description) {
   const modalDescription = document.createElement("p");
   modalDescription.innerText = description;
 
-  modalContent.appendChild(closeButton);
   modalContent.appendChild(modalTitle);
   modalContent.appendChild(modalDescription);
   modal.appendChild(modalContent);
 
   document.body.appendChild(modal);
 
-  // Show the modal
   modal.style.display = "block";
+
+  if (link) {
+    const modalLink = document.createElement("a");
+    modalLink.href = link;
+    modalLink.innerText = linkText || "Click here for more information";
+    modalLink.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevent the event from bubbling up
+    });
+
+    modalContent.appendChild(modalLink); // Add the link to the modal content
+  }
+
+  // Close the modal when clicking on the modal itself
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 }
 
 const hexes = document.querySelectorAll(".hex");
 
 hexes.forEach((hex, index) => {
-  hex.addEventListener("click", (event) => {
+  hex.addEventListener("click", (e) => {
     const title = hex.querySelector("h1");
     const description = hex.querySelector("p");
+    const link = hex.getAttribute("data-link");
+    const linkText = hex.getAttribute("data-link-text");
 
     if (title && description) {
-      createAndShowSkillModal(event, title.innerText, description.innerText);
+      createAndShowSkillModal(title.innerText, description.innerText, link, linkText);
     }
   });
 });
+
