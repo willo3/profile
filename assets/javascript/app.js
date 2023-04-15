@@ -36,6 +36,7 @@
 const hexList = document.querySelectorAll('.hex');
 const toggleList = document.querySelectorAll('.right-side li');
 const skillMenu = document.querySelector(".right-side");
+const skillMenuMobile = document.querySelector(".skills-menu-mobile"); // Added this line
 
 const originalOrder = Array.from(hexList);
 
@@ -57,7 +58,24 @@ skillMenu.addEventListener('click', (e) => {
   toggleSkills(activeSkills);
 });
 
-function toggleSkills(skillsToActivate) {
+skillMenuMobile.addEventListener('click', (e) => {
+  const activeSkills = e.target.closest("li");
+  if (!activeSkills) return;
+
+  // First, collapse all other groups in the .skills-menu-mobile
+  let mobileMenuItems = skillMenuMobile.querySelectorAll('.menu-item-has-children');
+  mobileMenuItems.forEach(function (item) {
+      if (item !== activeSkills) {
+          item.classList.remove('open');
+      }
+  });
+
+  // Then, toggle the current group
+  toggleSkills(activeSkills);
+});
+
+
+function toggleSkills(skillsToActivate, forceActivate = false) {
   const skillsText = skillsToActivate.textContent.trim().toLowerCase();
   let startIndex, endIndex;
 
@@ -83,14 +101,14 @@ function toggleSkills(skillsToActivate) {
     }
   }
 
-  if (allActive) {
+  if (allActive && !forceActivate) {
     skillsToActivate.classList.remove('active');
   } else {
     skillsToActivate.classList.add('active');
   }
 
   for (let i = startIndex; i < endIndex; i++) {
-    if (hexList[i].style.opacity === '0') {
+    if (hexList[i].style.opacity === '0' || forceActivate) {
       hexList[i].style.opacity = '1';
     } else {
       hexList[i].style.opacity = '0';
@@ -106,6 +124,7 @@ function toggleSkills(skillsToActivate) {
     hexGrid.appendChild(hex);
   });
 }
+
 
 // Simulate clicking the certificates option twice on page load
 const certificatesOption = toggleList[3];
