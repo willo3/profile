@@ -260,6 +260,8 @@ transition: 0.8s;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
+  text-align: center;
+  padding-left: 30rem;
 }
 .right-side li {
   position: static;
