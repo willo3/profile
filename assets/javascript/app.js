@@ -36,7 +36,7 @@
 const hexList = document.querySelectorAll('.hex');
 const toggleList = document.querySelectorAll('.right-side li');
 const skillMenu = document.querySelector(".right-side");
-const skillMenuMobile = document.querySelector(".skills-menu-mobile"); // Added this line
+const skillMenuMobile = document.querySelector(".skills-menu-mobile");
 
 const originalOrder = Array.from(hexList);
 
@@ -71,11 +71,12 @@ skillMenuMobile.addEventListener('click', (e) => {
   });
 
   // Then, toggle the current group
-  toggleSkills(activeSkills);
+  toggleSkills(activeSkills, false, 'mobile');
 });
 
 
-function toggleSkills(skillsToActivate, forceActivate = false) {
+
+function toggleSkills(skillsToActivate, forceActivate = false, menuOrigin = null) {
   const skillsText = skillsToActivate.textContent.trim().toLowerCase();
   let startIndex, endIndex;
 
@@ -91,6 +92,23 @@ function toggleSkills(skillsToActivate, forceActivate = false) {
   } else if (skillsText === 'certificates') {
     startIndex = 15;
     endIndex = 17;
+  }
+
+  if (menuOrigin === 'mobile') {
+    const allGroups = [
+      { start: 0, end: 6 },
+      { start: 6, end: 10 },
+      { start: 10, end: 15 },
+      { start: 15, end: 17 },
+    ];
+
+    allGroups.forEach(group => {
+      if (group.start !== startIndex || group.end !== endIndex) {
+        for (let i = group.start; i < group.end; i++) {
+          hexList[i].style.opacity = '0';
+        }
+      }
+    });
   }
 
   let allActive = true;
@@ -124,6 +142,7 @@ function toggleSkills(skillsToActivate, forceActivate = false) {
     hexGrid.appendChild(hex);
   });
 }
+
 
 
 // Simulate clicking the certificates option twice on page load
